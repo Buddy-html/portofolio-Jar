@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Pajar — calon UI designer kelas 7A Al-Husein. Jasa bikin website murah: portofolio, toko, sekolah, kelas. Mulai 5K!">
+<meta property="og:title" content="Pajar — Calon UI Designer & Jasa Bikin Website">
+<meta property="og:description" content="Jasa bikin website murah mulai 5K. Portofolio, toko, sekolah, kelas. Support mobile, PC, tablet.">
+<meta property="og:type" content="website">
+<title>portofolio-Jar</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0&display=block" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{--ac:#2f7dff;--sk:#7fd4ff;--ink:#0d2a4a;--pk:#ff6f93;--bg:#f4faff}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#dbe9f5;font-family:'Baloo 2',system-ui,sans-serif;color:var(--ink);-webkit-tap-highlight-color:transparent;overflow-x:hidden}
+a{color:var(--ac);text-decoration:none}button{font-family:inherit;color:inherit}*{box-sizing:border-box}
+.ms{font-family:'Material Symbols Rounded';font-weight:normal;font-style:normal;line-height:1;white-space:nowrap;font-feature-settings:'liga';font-variation-settings:'FILL' 1,'wght' 500,'GRAD' 0,'opsz' 24;display:inline-block}
+.page{position:relative;width:100%;max-width:440px;min-height:100vh;margin:0 auto;overflow-x:clip;background-color:var(--bg);background-image:radial-gradient(#cfe6fa 1.6px,transparent 1.6px);background-size:18px 18px;transition:background-color 2s ease}
+@media(min-width:441px){.page{border-left:4px solid var(--ink);border-right:4px solid var(--ink);max-width:448px}}
+.topbar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;padding-top:calc(14px + env(safe-area-inset-top,0px));background:rgba(244,250,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:3px solid var(--ink)}
+.brand{display:flex;align-items:center;gap:8px}.brand-name{font-weight:800;font-size:19px;letter-spacing:.06em}
+.chip-yx{width:38px;height:38px;border-radius:11px;background:var(--sk);border:2.5px solid var(--ink);box-shadow:2px 2px 0 var(--ink);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;color:#fff;-webkit-text-stroke:1.2px var(--ink);transform:rotate(-6deg);transition:transform .4s;cursor:pointer;user-select:none}
+.btn-back{width:40px;height:40px;border-radius:12px;background:#fff;border:2.5px solid var(--ink);box-shadow:2px 2px 0 var(--ink);display:flex;align-items:center;justify-content:center;color:var(--ink);cursor:pointer}.btn-back .ms{font-size:22px}
+.prog{position:absolute;left:0;bottom:-3px;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(var(--p,0));background:var(--ac)}
+.run{position:absolute;bottom:-17px;left:calc(var(--p,0) * (100% - 28px));width:28px;height:28px;pointer-events:none;animation:hop .5s ease-in-out infinite alternate}
+@keyframes hop{to{transform:translateY(-5px) rotate(8deg)}}
+.press{transition:transform .08s,box-shadow .08s;cursor:pointer}
+.press:active{transform:translate(4px,4px)!important;box-shadow:0 0 0 var(--ink)!important}
+.sec{padding:0 20px 36px;display:flex;flex-direction:column;gap:16px;position:relative}
+.h2{font-weight:800;font-size:30px;line-height:1.05}.sub{font-weight:500;font-size:15px;line-height:1.4;color:#4a6a8a;margin:0}
+.sub b{color:var(--ink);font-weight:800}
+.hero{position:relative;padding:26px 20px 34px;display:flex;flex-direction:column;gap:18px}
+.hero-title{font-weight:800;font-size:44px;line-height:1;letter-spacing:-.01em;margin:0}
+.hero-text{font-weight:500;font-size:17px;line-height:1.4;color:#4a6a8a;margin:0}
+.badge-upd{align-self:flex-start;display:flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;background:#fff;border:2.5px solid var(--ink);box-shadow:2px 2px 0 var(--ink);font-weight:800;font-size:13px;transform:rotate(-2deg)}
+.badge-upd i{width:8px;height:8px;border-radius:50%;background:#2fc48a;animation:blip 1.4s infinite}@keyframes blip{50%{transform:scale(1.7);opacity:.4}}
+.pill{display:inline-block;padding:0 10px;background:var(--sk);border:3px solid var(--ink);border-radius:14px;box-shadow:4px 4px 0 var(--ink);transform:rotate(-3deg);color:#fff;-webkit-text-stroke:1.5px var(--ink)}
+.pill.flip{animation:flip .5s}@keyframes flip{0%{transform:rotate(-3deg) rotateX(90deg)}100%{transform:rotate(-3deg) rotateX(0)}}
+.btn-main{position:relative;overflow:hidden;height:62px;border-radius:18px;background:var(--ac);border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);color:#fff;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-main .ms{font-size:24px}a.btn-main:hover{color:#fff}
+.btn-main::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:rgba(255,255,255,.45);transform:skewX(-20deg);animation:shine 3s infinite}@keyframes shine{60%,100%{left:130%}}
+.btn-ghost{height:54px;border-radius:18px;background:#fff;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);color:var(--ink);font-weight:800;font-size:17px;display:flex;align-items:center;justify-content:center;gap:8px}
+.card{padding:16px;display:flex;flex-direction:column;gap:12px;background:#fff;border:3px solid var(--ink);border-radius:20px;box-shadow:4px 4px 0 var(--ink)}
+.card-t{font-weight:800;font-size:18px;line-height:1.2}
+.feat{padding:16px 14px;display:flex;flex-direction:column;gap:10px;border:3px solid var(--ink);border-radius:20px;box-shadow:4px 4px 0 var(--ink);background:#fff;user-select:none;cursor:pointer}
+.feat-ico{width:44px;height:44px;border-radius:14px;background:#fff;border:2.5px solid var(--ink);display:flex;align-items:center;justify-content:center}.feat-ico .ms{font-size:24px;color:var(--ac)}
+.feat-t{font-weight:800;font-size:17px;line-height:1.1}.feat-d{font-weight:500;font-size:14px;line-height:1.35;color:#3a5674}
+.feat.wig{animation:wig .5s}@keyframes wig{20%{transform:rotate(-4deg) scale(1.03)}40%{transform:rotate(4deg)}60%{transform:rotate(-2deg)}80%{transform:rotate(2deg)}}
+.chip{padding:4px 12px;border-radius:10px;background:#fff;border:2.5px solid var(--ink);box-shadow:2px 2px 0 var(--ink);font-weight:800;font-size:14px}.chip.alt{background:#dff3ff}
+.apps{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.sk-row{display:flex;flex-direction:column;gap:4px}.sk-row div{display:flex;justify-content:space-between;font-weight:800;font-size:16px}.sk-row span{font-weight:600;font-size:13px;color:#5f7f9f}
+.meter{height:14px;border:2.5px solid var(--ink);border-radius:99px;overflow:hidden;background:#fff}
+.meter i{display:block;height:100%;width:0;background:var(--sk);border-right:2.5px solid var(--ink);transition:width 1.3s cubic-bezier(.3,1.4,.5,1)}
+.sk-row.in .meter i,html:not(.js) .meter i{width:var(--w)}
+.steps{display:flex;flex-direction:column;gap:12px}
+.step{display:flex;align-items:center;gap:14px;padding:14px;background:#fff;border:3px solid var(--ink);border-radius:18px;box-shadow:4px 4px 0 var(--ink)}
+.step-n{width:46px;height:46px;flex-shrink:0;border-radius:14px;background:var(--sk);border:2.5px solid var(--ink);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;color:#fff;-webkit-text-stroke:1.2px var(--ink)}
+.step.in .step-n{animation:spin .7s cubic-bezier(.3,1.5,.5,1)}@keyframes spin{from{transform:rotate(-270deg) scale(.3)}}
+.step-t{display:flex;flex-direction:column;line-height:1.2}.step-t b{font-weight:800;font-size:17px}.step-t span{font-weight:500;font-size:14px;color:#4a6a8a}
+.faq{display:flex;flex-direction:column;gap:12px}
+.faq-item{background:#fff;border:3px solid var(--ink);border-radius:18px;box-shadow:4px 4px 0 var(--ink);overflow:hidden}.faq-item.open{background:#dff3ff}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;cursor:pointer;user-select:none}
+.faq-q b{font-weight:800;font-size:16px;line-height:1.2}.faq-q .ms{font-size:24px;transition:transform .25s}.faq-item.open .faq-q .ms{transform:rotate(180deg)}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}.faq-a>div{overflow:hidden;padding:0 16px;font-size:15px;line-height:1.4;color:#3a5674}
+.faq-item.open .faq-a{grid-template-rows:1fr}.faq-item.open .faq-a>div{padding-bottom:16px}
+.faq-item.highlight{background:#fff8d6}.faq-item.highlight.open{background:#ffe45e}
+.link-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.link-card{padding:14px 12px;display:flex;flex-direction:column;gap:8px;background:#fff;border:2.5px solid var(--ink);border-radius:16px;box-shadow:3px 3px 0 var(--ink);color:var(--ink);text-align:left;font-size:inherit;cursor:pointer}a.link-card:hover{color:var(--ink)}
+.link-ico{width:38px;height:38px;border-radius:12px;background:var(--sk);border:2.5px solid var(--ink);display:flex;align-items:center;justify-content:center}.link-ico .ms{font-size:22px;color:#fff}
+.link-card b{font-weight:800;font-size:16px;line-height:1}.link-card small{font-weight:600;font-size:12px;color:#5f7f9f}
+.cta{margin:0 20px 30px;padding:24px 20px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;background:var(--sk);border:3px solid var(--ink);border-radius:24px;box-shadow:6px 6px 0 var(--ink)}
+.cta-t{font-weight:800;font-size:30px;line-height:1.05;color:#fff;-webkit-text-stroke:1.5px var(--ink)}.cta-d{font-weight:600;font-size:16px}
+.cta-btn{align-self:stretch;height:58px;border-radius:16px;background:#fff;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);color:var(--ink);font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;gap:8px}.cta-btn .ms{font-size:22px;color:var(--ac)}
+.scallop{height:18px;background-image:radial-gradient(circle at 50% 100%,#bfe6ff 10px,var(--ink) 10px 13px,transparent 13px);background-size:28px 18px;background-repeat:repeat-x;background-position:center bottom}
+.p-foot{padding:22px 20px 140px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:13px;color:#3a5674}.p-foot .ms{font-size:16px;color:var(--pk);animation:beat 1s infinite}@keyframes beat{50%{transform:scale(1.4)}}
+.float{position:fixed;inset:0;width:100%;max-width:440px;margin:0 auto;pointer-events:none;z-index:8}
+.fab{position:absolute;right:16px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:#25d366;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);display:flex;align-items:center;justify-content:center;color:#fff;pointer-events:auto;animation:shake 3.5s infinite}
+a.fab:hover{color:#fff}.fab .ms{font-size:28px}@keyframes shake{0%,86%,100%{transform:rotate(0)}89%{transform:rotate(-14deg)}92%{transform:rotate(12deg)}95%{transform:rotate(-8deg)}}
+.hero>canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}.hero>*{z-index:1}.hero>canvas{z-index:0}
+.mqs{margin:0 -12px 40px;padding:14px 0;perspective:600px}
+.mq{overflow:hidden;white-space:nowrap;border-block:3px solid var(--ink);color:#fff;background:var(--ac);transform-style:preserve-3d;transition:transform .3s}
+.mq.a{transform:rotateX(15deg) rotate(-2deg)}
+.mq.b{background:var(--pk);margin-top:-3px;transform:rotateX(-15deg) rotate(1.5deg)}
+.mq>div{display:inline-block;padding:8px 0;font-weight:800;font-size:22px;will-change:transform}
+.orbit{position:absolute;right:14px;top:14px;width:92px;height:92px;animation:rt 14s linear infinite}@keyframes rt{to{transform:rotate(360deg)}}
+.stack{display:flex;flex-direction:column;gap:22px;padding-bottom:30px}
+.stack .feat{position:sticky;top:calc(86px + var(--i)*16px);flex-direction:row;align-items:center;gap:14px;padding:20px 16px;min-height:170px;background:var(--bg);transform:rotate(var(--r))}
+.stack .feat-ico{width:56px;height:56px;flex:none}.stack .feat-ico .ms{font-size:30px}.stack .feat-t{font-size:22px}.stack .feat-d{font-size:15px}
+.w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.1em}.w>span{display:inline-block;transform:translateY(110%) rotate(6deg);transition:transform .7s cubic-bezier(.2,1.2,.4,1)}.h2.in .w>span{transform:none}
+.h2::after{content:"";display:block;height:8px;width:0;margin-top:6px;border-radius:9px;background:var(--sk);border:2px solid var(--ink);transition:width .8s .4s cubic-bezier(.3,1.4,.5,1)}.h2.in::after,html:not(.js) .h2::after{width:90px}
+.rp{position:fixed;width:50px;height:50px;border-radius:50%;border:3px solid var(--ink);background:color-mix(in srgb,var(--sk) 50%,transparent);pointer-events:none;z-index:30}
+.step-n .ms{font-size:26px}
+.dot{position:fixed;width:10px;height:10px;border:2px solid var(--ink);border-radius:3px;pointer-events:none;z-index:20}
+.js .rv{opacity:0;transform:scale(1.06) translateY(14px) rotate(-1deg);transition:all .55s cubic-bezier(.3,1.5,.5,1);transition-delay:var(--d,0s)}.js .rv.in{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--pk);outline-offset:3px}
+
+/* ==== Section Jasa ==== */
+.svc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.svc{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 6px;background:#f4faff;border:2.5px solid var(--ink);border-radius:14px;box-shadow:3px 3px 0 var(--ink)}
+.svc .ms{font-size:26px;color:var(--ac)}
+.svc b{font-weight:800;font-size:13px;text-align:center;line-height:1.1}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.price-list{display:flex;flex-direction:column;gap:20px}
+.price{padding:20px 18px;background:#fff;border:3px solid var(--ink);border-radius:22px;box-shadow:5px 5px 0 var(--ink);display:flex;flex-direction:column;gap:10px;position:relative;transition:transform .15s,box-shadow .15s;transform-style:preserve-3d;perspective:1000px}
+.price:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink)}
+.price-tag{align-self:flex-start;padding:3px 12px;background:var(--ink);color:#fff;font-weight:800;font-size:12px;border-radius:8px;letter-spacing:.03em}
+.price-badge{position:absolute;top:-14px;right:14px;padding:4px 12px;background:#ffe45e;color:var(--ink);font-weight:800;font-size:12px;border:2.5px solid var(--ink);border-radius:10px;box-shadow:3px 3px 0 var(--ink);transform:rotate(6deg);letter-spacing:.05em;z-index:2}
+.price-badge.hot{background:#ff4d6d;color:#fff;animation:pulse 1.4s infinite}
+.price-badge.premium{background:linear-gradient(135deg,#ffd700,#ff9a2f);color:var(--ink)}
+@keyframes pulse{50%{transform:rotate(6deg) scale(1.12)}}
+.price-num{font-weight:800;font-size:52px;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.price-num::before{content:"Rp ";font-size:22px;vertical-align:super;margin-right:2px}
+.price-desc{font-weight:500;font-size:14px;line-height:1.35;color:#3a5674}
+.price-btn{margin-top:6px;height:48px;border-radius:14px;background:var(--ac);border:2.5px solid var(--ink);box-shadow:3px 3px 0 var(--ink);color:#fff;font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center;gap:6px}
+.price-btn:hover{color:#fff}
+.price-btn .ms{font-size:20px}
+.price-detail{display:none;font-weight:600;font-size:14px;line-height:1.4;color:#3a5674;padding-left:18px;position:relative}
+.price.flipped .price-detail{display:block}
+.price-detail::before{content:"✦";position:absolute;left:0;color:var(--ac);font-weight:800}
+.price.flipped .price-num,.price.flipped .price-desc{display:none}
+.flip-hint{align-self:flex-start;display:flex;align-items:center;gap:4px;font-weight:700;font-size:11px;color:#5f7f9f;cursor:pointer;margin-top:-4px}
+.flip-hint .ms{font-size:16px}
+.perks{display:flex;flex-direction:column;gap:10px}
+.perk{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;line-height:1.3}
+.perk .ms{font-size:22px;color:var(--ac);flex-shrink:0}
+.perk b{font-weight:800}
+.nego-note{display:flex;align-items:center;gap:10px;padding:12px 14px;background:#fff8d6;border:2.5px dashed var(--ink);border-radius:16px;font-weight:700;font-size:14px;line-height:1.3}
+.nego-note .ms{font-size:24px;color:#ff9a2f;flex-shrink:0}
+
+/* ==== Sticky CTA Bar ==== */
+.sticky-cta{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translate(-50%,140%);width:calc(100% - 32px);max-width:416px;padding:10px 12px 10px 16px;display:flex;align-items:center;gap:12px;background:#fff;border:3px solid var(--ink);border-radius:18px;box-shadow:5px 5px 0 var(--ink);z-index:9;transition:transform .4s cubic-bezier(.3,1.4,.5,1)}
+.sticky-cta.show{transform:translate(-50%,0)}
+.scta-info{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.15}
+.scta-info b{font-weight:800;font-size:15px}
+.scta-info small{font-weight:600;font-size:12px;color:#5f7f9f}
+.scta-btn{flex-shrink:0;height:44px;padding:0 16px;background:var(--ac);border:2.5px solid var(--ink);border-radius:12px;box-shadow:3px 3px 0 var(--ink);color:#fff;font-weight:800;font-size:15px;display:flex;align-items:center;gap:5px}
+.scta-btn .ms{font-size:20px}
+.scta-btn:hover{color:#fff}
+
+/* ==== Door reveal ==== */
+.door-wrap{position:relative;overflow:hidden}
+.door{position:absolute;top:0;bottom:0;width:51%;background:#0d2a4a;z-index:4;pointer-events:none;transition:transform 1.2s cubic-bezier(.7,0,.3,1)}
+.door.l{left:0;transform-origin:left center;border-right:2px solid var(--sk)}
+.door.r{right:0;transform-origin:right center;border-left:2px solid var(--sk)}
+.door-wrap.open .door.l{transform:perspective(1200px) rotateY(-110deg)}
+.door-wrap.open .door.r{transform:perspective(1200px) rotateY(110deg)}
+.door-icon{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--sk);font-size:60px;font-weight:800;letter-spacing:.1em}
+.door.l .door-icon{justify-content:flex-end;padding-right:16px}
+.door.r .door-icon{justify-content:flex-start;padding-left:16px}
+
+/* ==== Jelly scroll ==== */
+.jelly-target{will-change:transform;transition:transform .6s cubic-bezier(.34,1.56,.64,1)}
+.jelly-active .jelly-target{transition:transform .15s ease-out}
+
+/* ==== Time-of-day indicator ==== */
+.tod{display:flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.7);border:2px solid var(--ink);font-weight:700;font-size:11px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.tod .ms{font-size:14px}
+
+/* ==== Fullscreen Menu ==== */
+.menu-overlay{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;padding:calc(20px + env(safe-area-inset-top,0px)) 24px calc(24px + env(safe-area-inset-bottom,0px));background:rgba(13,42,74,.65);backdrop-filter:blur(28px) saturate(180%);-webkit-backdrop-filter:blur(28px) saturate(180%);opacity:0;visibility:hidden;transition:opacity .5s cubic-bezier(.4,0,.2,1),visibility .5s;pointer-events:none;overflow-y:auto}
+.menu-overlay.open{opacity:1;visibility:visible;pointer-events:auto}
+.menu-bg-shapes{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.menu-bg-shapes .shape{position:absolute;border:3px solid rgba(127,212,255,.35);border-radius:50%;opacity:0;transition:opacity .8s}
+.menu-overlay.open .menu-bg-shapes .shape{opacity:1}
+.shape.s1{width:180px;height:180px;top:-60px;right:-60px;background:rgba(127,212,255,.12);animation:float1 8s ease-in-out infinite}
+.shape.s2{width:120px;height:120px;bottom:20%;left:-50px;background:rgba(255,111,147,.12);animation:float2 10s ease-in-out infinite}
+.shape.s3{width:90px;height:90px;top:30%;right:15%;background:rgba(255,228,94,.15);border-radius:14px;transform:rotate(20deg);animation:float1 7s ease-in-out infinite}
+.shape.s4{width:60px;height:60px;bottom:35%;right:25%;background:rgba(47,196,138,.15);border-radius:14px;transform:rotate(45deg);animation:float2 9s ease-in-out infinite}
+@keyframes float1{50%{transform:translateY(-20px) rotate(15deg)}}
+@keyframes float2{50%{transform:translateY(20px) rotate(-15deg)}}
+
+.menu-close{align-self:flex-start;display:flex;align-items:center;gap:8px;padding:10px 16px 10px 12px;background:rgba(255,255,255,.1);border:2.5px solid rgba(255,255,255,.4);border-radius:14px;color:#fff;font-weight:800;font-size:15px;cursor:pointer;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin-bottom:auto;opacity:0;transform:translateX(-20px);transition:opacity .4s,transform .4s,background .2s;z-index:2}
+.menu-overlay.open .menu-close{opacity:1;transform:none;transition-delay:.15s}
+.menu-close:hover{background:rgba(255,255,255,.2)}
+.menu-close .ms{font-size:22px}
+
+.menu-nav{display:flex;flex-direction:column;gap:4px;margin:auto 0;padding:20px 0;position:relative;z-index:1}
+.menu-item{display:flex;align-items:center;gap:14px;padding:14px 12px;color:#fff;font-weight:800;font-size:38px;line-height:1;letter-spacing:-.02em;position:relative;border-radius:14px;cursor:pointer;text-decoration:none}
+.menu-item:hover{background:rgba(255,255,255,.08);transform:translateX(8px);transition:transform .3s,background .2s;color:#fff}
+.menu-item.highlight{color:#7fd4ff}
+
+.menu-num{font-size:13px;font-weight:800;color:rgba(255,255,255,.5);min-width:28px;font-variant-numeric:tabular-nums;padding-top:6px}
+.menu-label{flex:1;transition:letter-spacing .3s;display:inline-flex}
+.menu-item:hover .menu-label{letter-spacing:.02em}
+.menu-arrow{font-size:32px;opacity:0;transform:translate(-10px,10px);transition:opacity .3s,transform .3s;color:#7fd4ff}
+.menu-item:hover .menu-arrow{opacity:1;transform:none}
+.menu-item.highlight .menu-arrow{opacity:.7;transform:none}
+
+/* Animasi huruf per-huruf */
+.menu-letter{
+  display:inline-block;
+  opacity:0;
+  transform:translateY(60px) rotate(15deg);
+  transition:opacity .5s cubic-bezier(.3,1.4,.5,1),transform .6s cubic-bezier(.3,1.4,.5,1);
+}
+.menu-overlay.open .menu-letter{
+  opacity:1;
+  transform:none;
+}
+.menu-item{opacity:0;transition:opacity .3s}
+.menu-overlay.open .menu-item{opacity:1;transition-delay:.25s}
+
+.menu-footer{display:flex;flex-direction:column;gap:12px;align-items:center;opacity:0;transform:translateY(20px);transition:opacity .5s .6s,transform .5s .6s;position:relative;z-index:1}
+.menu-overlay.open .menu-footer{opacity:1;transform:none}
+.menu-social{display:flex;gap:12px}
+.menu-social a{width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.1);border:2.5px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .2s,transform .15s}
+.menu-social a:hover{background:rgba(127,212,255,.25);transform:translateY(-3px);color:#fff}
+.menu-social .ms{font-size:22px}
+.menu-copy{font-size:12px;font-weight:600;color:rgba(255,255,255,.5);margin:0;text-align:center}
+
+body.menu-open{overflow:hidden}
+
+/* ==== Preview Section (hover) ==== */
+.menu-preview{
+  position:fixed;
+  right:calc((100vw - min(100vw,440px)) / 2 + 20px);
+  top:50%;
+  transform:translateY(-50%) translateX(40px) scale(.9);
+  width:220px;
+  padding:16px;
+  background:rgba(255,255,255,.95);
+  border:3px solid var(--ink);
+  border-radius:18px;
+  box-shadow:6px 6px 0 var(--ink);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .35s,transform .35s cubic-bezier(.3,1.4,.5,1);
+  z-index:101;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+.menu-preview.show{
+  opacity:1;
+  transform:translateY(-50%) translateX(0) scale(1);
+}
+.preview-emoji{font-size:40px;line-height:1;margin-bottom:6px}
+.preview-title{font-weight:800;font-size:17px;line-height:1.15;margin:0 0 4px}
+.preview-desc{font-weight:600;font-size:12px;line-height:1.35;color:#5f7f9f;margin:0}
+.preview-tag{display:inline-block;margin-top:8px;padding:3px 10px;background:var(--sk);border:2px solid var(--ink);border-radius:8px;font-weight:800;font-size:11px;color:#fff;-webkit-text-stroke:.8px var(--ink)}
+
+/* Swipe indicator */
+.swipe-hint{
+  position:fixed;
+  left:0;
+  top:50%;
+  transform:translateY(-50%);
+  width:6px;
+  height:80px;
+  background:var(--ac);
+  border-radius:0 8px 8px 0;
+  z-index:7;
+  opacity:0;
+  animation:swipePulse 3s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes swipePulse{
+  0%,100%{opacity:0;transform:translateY(-50%) translateX(-6px)}
+  50%{opacity:.6;transform:translateY(-50%) translateX(0)}
+}
+body.menu-open .swipe-hint{display:none}
+
+@media(max-width:360px){.menu-item{font-size:32px;padding:12px 10px}.menu-preview{width:180px}}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}.meter i{width:var(--w)}.w>span{transform:none!important}html{scroll-behavior:auto}.door{display:none}.menu-letter{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- Swipe hint indicator (kiri layar) -->
+<div class="swipe-hint" aria-hidden="true"></div>
+
+<!-- Fullscreen Menu -->
+<div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+  <div class="menu-bg-shapes" aria-hidden="true">
+    <div class="shape s1"></div>
+    <div class="shape s2"></div>
+    <div class="shape s3"></div>
+    <div class="shape s4"></div>
+  </div>
+
+  <button class="menu-close press" id="menuClose" aria-label="Tutup menu">
+    <span class="ms">arrow_back</span>
+    <span>Kembali</span>
+  </button>
+
+  <nav class="menu-nav">
+    <a href="#kenal" class="menu-item" data-preview="beranda">
+      <span class="menu-num">01</span>
+      <span class="menu-label" data-text="Beranda"></span>
+      <span class="ms menu-arrow">arrow_outward</span>
+    </a>
+    <a href="#jasa" class="menu-item" data-preview="jasa">
+      <span class="menu-num">02</span>
+      <span class="menu-label" data-text="Jasa Web"></span>
+      <span class="ms menu-arrow">arrow_outward</span>
+    </a>
+    <a href="#faq" class="menu-item" data-preview="faq">
+      <span class="menu-num">03</span>
+      <span class="menu-label" data-text="FAQ"></span>
+      <span class="ms menu-arrow">arrow_outward</span>
+    </a>
+    <a href="#kontak" class="menu-item" data-preview="kontak">
+      <span class="menu-num">04</span>
+      <span class="menu-label" data-text="Kontak"></span>
+      <span class="ms menu-arrow">arrow_outward</span>
+    </a>
+    <a href="https://wa.me/6281511518262?text=Halo%20Pajar!" target="_blank" rel="noopener" class="menu-item highlight" data-preview="wa">
+      <span class="menu-num">05</span>
+      <span class="menu-label" data-text="Chat WA"></span>
+      <span class="ms menu-arrow">chat</span>
+    </a>
+  </nav>
+
+  <div class="menu-footer">
+    <div class="menu-social">
+      <a href="https://wa.me/6281511518262" target="_blank" aria-label="WhatsApp"><span class="ms">chat</span></a>
+      <a href="#" aria-label="Instagram"><span class="ms">photo_camera</span></a>
+      <a href="#" aria-label="Email"><span class="ms">mail</span></a>
+    </div>
+    <p class="menu-copy">© 2026 Pajar · Kelas 7A Al-Husein</p>
+  </div>
+</div>
+
+<!-- Preview card (muncul saat hover menu item) -->
+<div class="menu-preview" id="menuPreview" aria-hidden="true">
+  <div class="preview-emoji" id="pvEmoji">👋</div>
+  <div class="preview-title" id="pvTitle">Beranda</div>
+  <p class="preview-desc" id="pvDesc">Kenalan sama Pajar dulu yuk!</p>
+  <span class="preview-tag" id="pvTag">Intro</span>
+</div>
+
+<div class="page" id="pg">
+  <header class="topbar">
+    <button class="btn-back press" id="menuBtn" aria-label="Buka menu" aria-expanded="false">
+      <span class="ms">menu</span>
+    </button>
+    <div class="brand"><div class="chip-yx" id="logo">PJ</div><div class="brand-name">PAJAR</div></div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <div class="tod" id="tod"><span class="ms">wb_sunny</span><span>Siang</span></div>
+      <a href="#jasa" class="btn-back press" aria-label="Jasa"><span class="ms">storefront</span></a>
+    </div>
+    <div class="prog"></div>
+    <svg class="run" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="15" r="11" fill="#FFD9B8" stroke="#0d2a4a" stroke-width="2.5"/><path d="M3 14c0-9 22-9 22 0-4-5-18-5-22 0z" fill="#0d2a4a"/><circle cx="10" cy="17" r="1.8" fill="#0d2a4a"/><circle cx="18" cy="17" r="1.8" fill="#0d2a4a"/></svg>
+  </header>
+
+  <section class="hero"><canvas id="cv" aria-hidden="true"></canvas>
+    <svg class="orbit" viewBox="0 0 100 100" aria-hidden="true"><defs><path id="oc" d="M50 50m-38 0a38 38 0 1 1 76 0a38 38 0 1 1-76 0"/></defs><circle cx="50" cy="50" r="48" fill="#fff" stroke="#0d2a4a" stroke-width="3"/><text font-size="11" font-weight="800" fill="#0d2a4a"><textPath href="#oc">HTML ✦ CSS ✦ JS ✦ PYTHON ✦ </textPath></text><path d="M50 36l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#ff6f93" stroke="#0d2a4a" stroke-width="2.5" stroke-linejoin="round"/></svg>
+    <div class="badge-upd"><i></i> Info terbaru: kelas 7A Al-Husein</div>
+    <h1 class="hero-title">Halo, aku<br>Pajar, calon<br><span class="pill" id="rot">UI designer</span></h1>
+    <p class="hero-text">Nama lengkapku Muhamad Pajardana Kusuma, siswa kelas 7A di SMP Al-Husein. Aku suka mendesain tampilan website, lalu menghidupkannya pakai HTML, CSS, JavaScript, dan kadang Python.</p>
+    <a href="https://wa.me/6281511518262?text=Halo%20Pajar!" target="_blank" rel="noopener" class="btn-main press"><span class="ms">chat</span> Chat WhatsApp</a>
+    <a href="#jasa" class="btn-ghost press"><span class="ms">storefront</span> Lihat Jasa Bikin Web</a>
+  </section>
+
+  <div class="mqs" aria-hidden="true">
+    <div class="mq a"><div id="m1">UI designer ✦ HTML ✦ CSS ✦ JavaScript ✦ Python ✦ Kelas 7A ✦ Al-Husein ✦ UI designer ✦ HTML ✦ CSS ✦ JavaScript ✦ Python ✦ Kelas 7A ✦ Al-Husein ✦ </div></div>
+    <div class="mq b"><div id="m2">Jasa Web ✦ Mulai 5K ✦ Bisa Nego ✦ Profesional ✦ Jasa Web ✦ Mulai 5K ✦ Bisa Nego ✦ Profesional ✦ Jasa Web ✦ Mulai 5K ✦ Bisa Nego ✦ Profesional ✦ </div></div>
+  </div>
+
+  <section class="sec" id="kenal">
+    <div class="h2 rv">Coba sentuh layarnya</div>
+    <p class="sub rv">Halaman ini sengaja dibuat untuk dimainkan. Ada banyak kejutan di sini.</p>
+    <div class="steps">
+      <div class="step rv"><div class="step-n"><span class="ms">touch_app</span></div><div class="step-t"><b>Sentuh bagian atas</b><span>Bentuk-bentuk menjauh dari jarimu dan meledak kalau diketuk.</span></div></div>
+      <div class="step rv" style="--d:.1s"><div class="step-n"><span class="ms">swipe_vertical</span></div><div class="step-t"><b>Scroll cepat</b><span>Halaman goyang kayak jelly, pita tulisan ngebut.</span></div></div>
+      <div class="step rv" style="--d:.2s"><div class="step-n"><span class="ms">swipe_right</span></div><div class="step-t"><b>Geser dari kiri</b><span>Buka menu fullscreen, geser ke kiri buat nutup.</span></div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="h2 rv">Keunggulan</div>
+    <p class="sub rv">Hal-hal yang bikin aku semangat belajar jadi UI designer web.</p>
+    <div class="stack"><div class="feat" style="--i:0;--bg:#fff;--r:-1.5deg"><div class="feat-ico"><span class="ms">grid_view</span></div><div><div class="feat-t">Rapi</div><div class="feat-d">Suka tata letak yang bersih dan gampang dibaca.</div></div></div><div class="feat" style="--i:1;--bg:#dff3ff;--r:1.2deg"><div class="feat-ico"><span class="ms">palette</span></div><div><div class="feat-t">Kreatif</div><div class="feat-d">Suka main warna, bentuk, dan animasi.</div></div></div><div class="feat" style="--i:2;--bg:var(--sk);--r:-1deg"><div class="feat-ico"><span class="ms">school</span></div><div><div class="feat-t">Rajin belajar</div><div class="feat-d">Terus latihan kode dan cari ilmu baru.</div></div></div><div class="feat" style="--i:3;--bg:#ffd9e3;--r:1.5deg"><div class="feat-ico"><span class="ms">touch_app</span></div><div><div class="feat-t">Peduli pengguna</div><div class="feat-d">Tampilan harus enak dipakai di HP.</div></div></div></div>
+  </section>
+
+  <section class="sec">
+    <div class="h2 rv">Kemampuan</div>
+    <div class="card rv">
+      <p class="sub">Ini bahasa yang kupakai. Tiga pertama sering, Python kadang-kadang.</p>
+      <div class="sk-row" style="--w:88%"><div>HTML<span>sering</span></div><div class="meter"><i></i></div></div>
+      <div class="sk-row" style="--w:84%"><div>CSS<span>sering</span></div><div class="meter"><i></i></div></div>
+      <div class="sk-row" style="--w:70%"><div>JavaScript<span>sering</span></div><div class="meter"><i></i></div></div>
+      <div class="sk-row" style="--w:38%"><div>Python<span>kadang</span></div><div class="meter"><i></i></div></div>
+    </div>
+  </section>
+
+  <section class="sec" id="jasa">
+    <div class="h2 rv">Jasa Bikin Website</div>
+    <p class="sub rv">Butuh website? Pajar siap bantu! Portofolio, toko online, website sekolah, kelas, landing page, atau template siap pakai. <b>Harga murah</b>, hasil <b>profesional</b>, dan <b>boleh request</b>.</p>
+
+    <div class="card rv" style="gap:14px">
+      <div class="card-t">Yang bisa dibuat 👇</div>
+      <div class="svc-grid">
+        <div class="svc"><span class="ms">person</span><b>Portofolio</b></div>
+        <div class="svc"><span class="ms">storefront</span><b>Toko Online</b></div>
+        <div class="svc"><span class="ms">school</span><b>Sekolah</b></div>
+        <div class="svc"><span class="ms">groups</span><b>Kelas</b></div>
+        <div class="svc"><span class="ms">rocket_launch</span><b>Landing Page</b></div>
+        <div class="svc"><span class="ms">dashboard</span><b>Template Web</b></div>
+      </div>
+      <div class="chip-row">
+        <span class="chip">📱 Mobile</span>
+        <span class="chip alt">💻 PC</span>
+        <span class="chip">🖥️ Laptop</span>
+        <span class="chip alt">📟 Tablet</span>
+      </div>
+      <p class="sub" style="margin:0;text-align:center">Support semua device. Tampilan rapi di HP sampai laptop.</p>
+    </div>
+
+    <div class="h2 rv" style="font-size:24px;margin-top:6px">Pricelist Murah</div>
+    <p class="sub rv">Harga ramah kantong pelajar. Ketuk kartu buat lihat detail!</p>
+
+    <div class="nego-note rv">
+      <span class="ms">handshake</span>
+      <span><b>Bisa nego!</b> Yang penting cocok, harga bisa dibicarakan 😄</span>
+    </div>
+
+    <div class="price-list">
+      <div class="price rv" data-price="5000">
+        <div class="price-tag">Starter</div>
+        <div class="price-num" data-target="5000">Rp 0</div>
+        <div class="price-desc">Web 1 halaman simpel. Cocok buat profil singkat atau latihan.</div>
+        <div class="price-detail">1 halaman, desain basic, form kontak sederhana, responsive mobile.</div>
+        <div class="flip-hint"><span class="ms">touch_app</span> Ketuk untuk detail</div>
+        <a href="https://wa.me/6281511518262?text=Halo%20Pajar%2C%20saya%20mau%20pesan%20Paket%20Starter%20(5K)" target="_blank" rel="noopener" class="price-btn press"><span class="ms">chat</span> Pesan Sekarang</a>
+      </div>
+
+      <div class="price rv" style="--d:.06s;background:#dff3ff" data-price="10000">
+        <div class="price-badge hot">🔥 TERLARIS</div>
+        <div class="price-tag">Hemat</div>
+        <div class="price-num" data-target="10000">Rp 0</div>
+        <div class="price-desc">Web 2-3 halaman, desain rapi, siap pakai buat portofolio atau kelas.</div>
+        <div class="price-detail">2-3 halaman, desain custom, galeri foto, form kontak, animasi ringan.</div>
+        <div class="flip-hint"><span class="ms">touch_app</span> Ketuk untuk detail</div>
+        <a href="https://wa.me/6281511518262?text=Halo%20Pajar%2C%20saya%20mau%20pesan%20Paket%20Hemat%20(10K)" target="_blank" rel="noopener" class="price-btn press"><span class="ms">chat</span> Pesan Sekarang</a>
+      </div>
+
+      <div class="price rv" style="--d:.12s" data-price="20000">
+        <div class="price-tag">Favorite</div>
+        <div class="price-num" data-target="20000">Rp 0</div>
+        <div class="price-desc">Web 3-5 halaman, animasi ringan, responsive. Best value!</div>
+        <div class="price-detail">3-5 halaman, desain full custom, animasi scroll, galeri interaktif, SEO basic.</div>
+        <div class="flip-hint"><span class="ms">touch_app</span> Ketuk untuk detail</div>
+        <a href="https://wa.me/6281511518262?text=Halo%20Pajar%2C%20saya%20mau%20pesan%20Paket%20Favorite%20(20K)" target="_blank" rel="noopener" class="price-btn press"><span class="ms">chat</span> Pesan Sekarang</a>
+      </div>
+
+      <div class="price rv" style="--d:.18s;background:var(--sk)" data-price="35000">
+        <div class="price-tag" style="background:#fff;color:var(--ink)">Pro</div>
+        <div class="price-num" data-target="35000">Rp 0</div>
+        <div class="price-desc">Web lengkap + animasi keren, responsive full, revisi sampai puas.</div>
+        <div class="price-detail">Halaman unlimited, animasi gila, dark mode, galeri interaktif, revisi 3x, SEO lengkap.</div>
+        <div class="flip-hint"><span class="ms">touch_app</span> Ketuk untuk detail</div>
+        <a href="https://wa.me/6281511518262?text=Halo%20Pajar%2C%20saya%20mau%20pesan%20Paket%20Pro%20(35K)" target="_blank" rel="noopener" class="price-btn press"><span class="ms">chat</span> Pesan Sekarang</a>
+      </div>
+
+      <div class="price rv" style="--d:.24s;background:var(--pk);color:#fff" data-price="50000">
+        <div class="price-badge premium">👑 PREMIUM</div>
+        <div class="price-tag" style="background:#fff;color:var(--ink)">Sultan</div>
+        <div class="price-num" data-target="50000" style="color:#fff">Rp 0</div>
+        <div class="price-desc">Web premium, custom full, animasi gila, support prioritas.</div>
+        <div class="price-detail">Semua fitur Pro + custom animasi, integrasi WA, admin panel, maintenance 1 bulan, prioritas support.</div>
+        <div class="flip-hint" style="color:#fff"><span class="ms">touch_app</span> Ketuk untuk detail</div>
+        <a href="https://wa.me/6281511518262?text=Halo%20Pajar%2C%20saya%20mau%20pesan%20Paket%20Sultan%20(50K)" target="_blank" rel="noopener" class="price-btn press"><span class="ms">chat</span> Pesan Sekarang</a>
+      </div>
+    </div>
+
+    <div class="card rv" style="background:#fff">
+      <div class="card-t">Kenapa pilih Pajar?</div>
+      <div class="perks">
+        <div class="perk"><span class="ms">payments</span><span><b>Harga murah</b> — mulai 5 ribu aja</span></div>
+        <div class="perk"><span class="ms">workspace_premium</span><span><b>Profesional</b> — rapi & enak dipakai</span></div>
+        <div class="perk"><span class="ms">edit_note</span><span><b>Boleh request</b> — bebas mau kayak apa</span></div>
+        <div class="perk"><span class="ms">devices</span><span><b>Support semua device</b> — mobile, PC, tablet</span></div>
+        <div class="perk"><span class="ms">bolt</span><span><b>Cepat</b> — pengerjaan on-time</span></div>
+        <div class="perk"><span class="ms">support_agent</span><span><b>Ramah</b> — konsultasi gratis dulu</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="h2 rv">Studio warna</div>
+    <p class="sub rv">Calon UI designer harus bisa main warna. Pilih satu, lihat tampilan seluruh halaman ini berubah.</p>
+    <div class="card rv">
+      <div class="sw" id="sw" style="display:flex;gap:10px;flex-wrap:wrap">
+        <button style="--c:#2f7dff;width:44px;height:44px;border-radius:12px;background:#2f7dff;border:2.5px solid var(--ink);box-shadow:2px 2px 0 var(--ink);cursor:pointer" data-a="#2f7dff" data-s="#7fd4ff" aria-pressed="true" aria-label="Biru"></button>
+        <button style="--c:#ff6f93;width:44px;height:44px;border-radius:12px;background:#ff6f93;border:2.5px solid var(--ink);box-shadow:2px 2px 0 var(--ink);cursor:pointer" data-a="#ff6f93" data-s="#ffc2d1" aria-pressed="false" aria-label="Pink"></button>
+        <button style="--c:#2fc48a;width:44px;height:44px;border-radius:12px;background:#2fc48a;border:2.5px solid var(--ink);box-shadow:2px 2px 0 var(--ink);cursor:pointer" data-a="#2fc48a" data-s="#9be8c9" aria-pressed="false" aria-label="Hijau"></button>
+        <button style="--c:#ff9a2f;width:44px;height:44px;border-radius:12px;background:#ff9a2f;border:2.5px solid var(--ink);box-shadow:2px 2px 0 var(--ink);cursor:pointer" data-a="#ff9a2f" data-s="#ffd9a3" aria-pressed="false" aria-label="Oranye"></button>
+        <button style="--c:#8a5cff;width:44px;height:44px;border-radius:12px;background:#8a5cff;border:2.5px solid var(--ink);box-shadow:2px 2px 0 var(--ink);cursor:pointer" data-a="#8a5cff" data-s="#cfbcff" aria-pressed="false" aria-label="Ungu"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="h2 rv">Cara Mulai</div>
+    <p class="sub rv">Rencanaku menuju UI designer web, selangkah demi selangkah.</p>
+    <div class="steps">
+      <div class="step rv"><div class="step-n">1</div><div class="step-t"><b>Latihan kode</b><span>HTML, CSS, dan JavaScript tiap hari.</span></div></div>
+      <div class="step rv" style="--d:.1s"><div class="step-n">2</div><div class="step-t"><b>Belajar desain</b><span>Warna, huruf, jarak, dan tata letak.</span></div></div>
+      <div class="step rv" style="--d:.2s"><div class="step-n">3</div><div class="step-t"><b>Bikin proyek</b><span>Website nyata dengan tampilan yang kuat.</span></div></div>
+    </div>
+  </section>
+
+  <div class="door-wrap" id="doorWrap">
+    <div class="door l"><div class="door-icon">✦</div></div>
+    <div class="door r"><div class="door-icon">✦</div></div>
+    <section class="sec">
+      <div class="card rv">
+        <div class="card-t">Ngoding langsung</div>
+        <p class="sub">Lihat Pajar mengetik kode, lalu hasilnya muncul di bawah.</p>
+        <pre id="pre" style="background:#0d2a4a;color:#7fd4ff;padding:14px;border-radius:14px;border:2.5px solid var(--ink);font-size:13px;overflow:auto;margin:0"></pre>
+        <div class="prev" id="prev" style="padding:16px;background:#dff3ff;border:2.5px solid var(--ink);border-radius:14px;text-align:center"><h4 style="margin:0 0 8px;font-weight:800;font-size:22px">Halo dunia!</h4><span class="pb" style="display:inline-block;padding:4px 14px;background:var(--ac);color:#fff;border:2.5px solid var(--ink);border-radius:10px;font-weight:800">Pajar</span></div>
+        <div class="apps"><span class="chip">HTML</span><span class="chip alt">CSS</span><span class="chip">JS</span><span class="chip alt">Python</span></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="sec" id="faq">
+    <div class="h2 rv">Pertanyaan Umum</div>
+    <div class="faq">
+      <div class="faq-item open rv"><div class="faq-q"><b>Siapa Pajar?</b><span class="ms">expand_more</span></div><div class="faq-a"><div>Muhamad Pajardana Kusuma, siswa kelas 7A di SMP Al-Husein. Aku suka bikin tampilan web yang rapi dan enak dipakai.</div></div></div>
+      <div class="faq-item rv" style="--d:.05s"><div class="faq-q"><b>Pakai bahasa apa?</b><span class="ms">expand_more</span></div><div class="faq-a"><div>Paling sering HTML, CSS, dan JavaScript. Python kadang-kadang buat hal yang butuh logika.</div></div></div>
+      <div class="faq-item highlight rv" style="--d:.1s"><div class="faq-q"><b>Jasa bikin web mulai berapa?</b><span class="ms">expand_more</span></div><div class="faq-a"><div>Mulai dari <b>5 ribu</b> aja! Ada 5 paket: Starter (5K), Hemat (10K), Favorite (20K), Pro (35K), dan Sultan (50K). Bisa nego, yang penting cocok.</div></div></div>
+      <div class="faq-item rv" style="--d:.15s"><div class="faq-q"><b>Berapa lama pengerjaannya?</b><span class="ms">expand_more</span></div><div class="faq-a"><div>Tergantung paket. Starter 1-2 hari, Hemat 2-3 hari, Favorite 3-5 hari, Pro & Sultan 5-10 hari. Kalau urgent bisa dibicarakan.</div></div></div>
+      <div class="faq-item rv" style="--d:.2s"><div class="faq-q"><b>Bisa revisi berapa kali?</b><span class="ms">expand_more</span></div><div class="faq-a"><div>Starter & Hemat: 1x revisi. Favorite: 2x. Pro: 3x. Sultan: revisi sampai puas. Revisi kecil (ganti teks/warna) gratis ya.</div></div></div>
+      <div class="faq-item rv" style="--d:.25s"><div class="faq-q"><b>Pembayarannya gimana?</b><span class="ms">expand_more</span></div><div class="faq-a"><div>Bisa transfer bank atau e-wallet (DANA, OVO, GoPay). DP 50% dulu, sisanya saat web selesai.</div></div></div>
+      <div class="faq-item rv" style="--d:.3s"><div class="faq-q"><b>Bisa request desain sendiri?</b><span class="ms">expand_more</span></div><div class="faq-a"><div>Boleh banget! Kasih referensi atau sketsa, aku usahain sesuai. Kalau bingung, aku bantu kasih rekomendasi.</div></div></div>
+      <div class="faq-item rv" style="--d:.35s"><div class="faq-q"><b>Webnya bisa dibuka di HP?</b><span class="ms">expand_more</span></div><div class="faq-a"><div>Pasti! Semua paket responsive — rapi di HP, tablet, laptop, dan PC.</div></div></div>
+      <div class="faq-item rv" style="--d:.4s"><div class="faq-q"><b>Cita-citanya apa?</b><span class="ms">expand_more</span></div><div class="faq-a"><div>Jadi UI designer web yang bikin tampilan website enak dilihat dan mudah dipakai. Sekarang lagi belajar terus.</div></div></div>
+    </div>
+  </section>
+
+  <section class="sec" id="kontak">
+    <div class="h2 rv">Hubungi Kami</div>
+    <div class="link-grid">
+      <a href="https://wa.me/6281511518262?text=Halo%20Pajar!" target="_blank" rel="noopener" class="link-card press rv"><div class="link-ico" style="background:#25d366"><span class="ms">chat</span></div><b>WhatsApp</b><small>+62 815-1151-8262</small></a>
+      <button class="link-card press rv" id="cp" style="--d:.1s"><div class="link-ico" style="background:#ff8fab"><span class="ms">content_copy</span></div><b id="cpb">Salin nomor</b><small>Sekali sentuh</small></button>
+    </div>
+  </section>
+
+  <div class="cta rv"><div class="cta-t">Siap Mulai?</div><div class="cta-d">Punya ide website? Kirim pesan ke Pajar.</div>
+    <a href="https://wa.me/6281511518262?text=Halo%20Pajar!" target="_blank" rel="noopener" class="cta-btn press"><span class="ms">rocket_launch</span> Kirim pesan</a></div>
+  <div class="scallop"></div>
+  <footer class="p-foot"><span>Dibuat dengan</span><span class="ms">favorite</span><span>oleh Pajar</span></footer>
+</div>
+<div class="float"><a href="https://wa.me/6281511518262?text=Halo%20Pajar!" target="_blank" rel="noopener" class="fab press" aria-label="WhatsApp"><span class="ms">chat</span></a></div>
+
+<div class="sticky-cta" id="scta">
+  <div class="scta-info">
+    <b>Jasa Web Mulai 5K</b>
+    <small>Bisa nego · Support semua device</small>
+  </div>
+  <a href="https://wa.me/6281511518262?text=Halo%20Pajar%2C%20saya%20mau%20pesan%20jasa%20bikin%20web" target="_blank" rel="noopener" class="scta-btn press">
+    <span class="ms">chat</span> Pesan
+  </a>
+</div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const rd=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const isMobile=matchMedia('(pointer:coarse)').matches;
+const isLowEnd=navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=4;
+
+// ===== Reveal on scroll =====
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+$$('.rv,.sk-row,.step').forEach(e=>io.observe(e));
+setTimeout(()=>$$('.rv').forEach(e=>e.classList.add('in')),5000);
+
+// ===== Progress bar =====
+const pg=$('#pg');
+addEventListener('scroll',()=>{const m=document.documentElement.scrollHeight-innerHeight;pg.style.setProperty('--p',m>0?Math.min(1,scrollY/m):0)},{passive:true});
+
+// ===== Rotating hero word =====
+const rot=$('#rot'),w=['UI designer','web designer','pembuat web'];let wi=0;
+setInterval(()=>{rot.classList.remove('flip');void rot.offsetWidth;rot.textContent=w[++wi%3];rot.classList.add('flip')},2200);
+
+// ===== Confetti =====
+const confetti=(x,y)=>{if(rd)return;const c=['#7fd4ff','#ff6f93','#ffe45e','#2f7dff','#25d366'];
+for(let i=0;i<18;i++){const d=document.createElement('i');d.className='dot';d.style.cssText=`left:${x}px;top:${y}px;background:${c[i%5]}`;document.body.appendChild(d);
+const a=Math.random()*6.28,r=70+Math.random()*90;
+d.animate([{transform:'translate(0,0) rotate(0)',opacity:1},{transform:`translate(${Math.cos(a)*r}px,${Math.sin(a)*r+60}px) rotate(${Math.random()*600}deg)`,opacity:0}],{duration:950,easing:'cubic-bezier(.2,.8,.4,1)'}).onfinish=()=>d.remove()}};
+
+// ===== Header word spans =====
+$$('.h2').forEach(el=>{const t=el.textContent.trim();el.setAttribute('aria-label',t);el.innerHTML=t.split(' ').map((w,i)=>`<span class="w" aria-hidden="true"><span style="transition-delay:${i*.09}s">${w}</span></span>`).join(' ')});
+
+// ===== Ripple =====
+addEventListener('pointerdown',e=>{if(rd)return;const d=document.createElement('i');d.className='rp';d.style.cssText=`left:${e.clientX}px;top:${e.clientY}px`;document.body.appendChild(d);
+d.animate([{transform:'translate(-50%,-50%) scale(.1)',opacity:.9},{transform:'translate(-50%,-50%) scale(7)',opacity:0}],{duration:700,easing:'cubic-bezier(.2,.8,.3,1)'}).onfinish=()=>d.remove()});
+
+// ===== Hero canvas =====
+const cv=$('#cv'),g=cv.getContext('2d'),hero=cv.parentElement,dpr=Math.min(2,devicePixelRatio||1);
+let CW,CH,sh=[],ptr={x:-999,y:-999},vis=true,ct=performance.now();
+const cols=()=>{const c=getComputedStyle(document.documentElement);return[c.getPropertyValue('--ac').trim(),c.getPropertyValue('--sk').trim(),'#ffe45e','#ff6f93','#fff']};
+function size(){CW=hero.clientWidth;CH=hero.clientHeight;cv.width=CW*dpr;cv.height=CH*dpr;g.setTransform(dpr,0,0,dpr,0,0)}
+function mk(x,y,b){const a=Math.random()*6.28,sp=b?180+Math.random()*200:20+Math.random()*30;return{x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,r:9+Math.random()*13,rot:Math.random()*6,vr:(Math.random()-.5)*3,t:Math.floor(Math.random()*4),c:Math.floor(Math.random()*5)}}
+function draw(s,C){g.save();g.translate(s.x,s.y);g.rotate(s.rot);g.fillStyle=C[s.c];g.strokeStyle='#0d2a4a';g.lineWidth=3;g.lineJoin='round';g.beginPath();const r=s.r;
+if(s.t===0)g.arc(0,0,r,0,6.283);else if(s.t===1)g.rect(-r,-r,2*r,2*r);else if(s.t===2){g.moveTo(0,-r);g.lineTo(r,r*.8);g.lineTo(-r,r*.8);g.closePath()}
+else{for(let i=0;i<8;i++){const a=i*Math.PI/4,q=i%2?r*.45:r*1.1;g[i?'lineTo':'moveTo'](Math.sin(a)*q,-Math.cos(a)*q)}g.closePath()}
+g.fill();g.stroke();g.restore()}
+function frame(t){requestAnimationFrame(frame);const dt=Math.min(.04,(t-ct)/1000);ct=t;if(!vis||document.hidden)return;g.clearRect(0,0,CW,CH);const C=cols();
+for(const s of sh){const dx=s.x-ptr.x,dy=s.y-ptr.y,d=Math.hypot(dx,dy);
+if(d<120&&d>0){const f=(120-d)/120*1100*dt;s.vx+=dx/d*f;s.vy+=dy/d*f;s.vr+=(dx>0?1:-1)*f*.03}
+s.vx*=1-1.1*dt;s.vy*=1-1.1*dt;if(Math.hypot(s.vx,s.vy)<24){s.vx+=(Math.random()-.5)*50*dt;s.vy+=(Math.random()-.5)*50*dt}
+s.x+=s.vx*dt;s.y+=s.vy*dt;s.rot+=s.vr*dt;
+if(s.x<s.r){s.x=s.r;s.vx=Math.abs(s.vx)}if(s.x>CW-s.r){s.x=CW-s.r;s.vx=-Math.abs(s.vx)}
+if(s.y<s.r){s.y=s.r;s.vy=Math.abs(s.vy)}if(s.y>CH-s.r){s.y=CH-s.r;s.vy=-Math.abs(s.vy)}draw(s,C)}}
+function init(){size();sh=[];const n=isLowEnd?8:14;for(let i=0;i<n;i++)sh.push(mk(Math.random()*CW,Math.random()*CH,false))}
+init();addEventListener('resize',()=>{size()});
+new IntersectionObserver(es=>vis=es[0].isIntersecting).observe(hero);
+if(rd){const C=cols();sh.forEach(s=>draw(s,C))}else requestAnimationFrame(frame);
+const hp=e=>{const r=hero.getBoundingClientRect();ptr.x=e.clientX-r.left;ptr.y=e.clientY-r.top;return r};
+addEventListener('pointermove',hp,{passive:true});addEventListener('pointerup',()=>{ptr.x=ptr.y=-999});
+addEventListener('pointerdown',e=>{const r=hp(e);if(e.clientY>=r.top&&e.clientY<=r.bottom){for(let i=0;i<6;i++)sh.push(mk(ptr.x,ptr.y,true));while(sh.length>36)sh.shift()}});
+
+// ===== Marquee 3D =====
+let vel=0,sy=scrollY,mx=[0,0];const m=[$('#m1'),$('#m2')];
+const mqA=document.querySelector('.mq.a'),mqB=document.querySelector('.mq.b');
+addEventListener('scroll',()=>{vel=Math.max(-40,Math.min(40,vel+(scrollY-sy)*.2));sy=scrollY},{passive:true});
+function mloop(t){vel*=.93;const w=m[0].scrollWidth/2,sk=Math.max(-12,Math.min(12,-vel*.5));
+mx[0]-=1.2+vel;mx[1]-=1.2+vel;const p0=((mx[0]%w)+w)%w,p1=((mx[1]%w)+w)%w;
+m[0].style.transform=`translateX(${-p0}px) skewX(${sk}deg)`;m[1].style.transform=`translateX(${p1-w}px) skewX(${sk}deg)`;
+if(!rd&&!isLowEnd){
+  const rx=Math.sin(t/1500)*8;
+  mqA.style.transform=`rotateX(${15+rx}deg) rotate(-2deg)`;
+  mqB.style.transform=`rotateX(${-15+rx}deg) rotate(1.5deg)`;
+}
+requestAnimationFrame(mloop)}
+if(!rd)requestAnimationFrame(mloop);
+
+$$('.feat').forEach(f=>f.addEventListener('click',()=>{f.classList.remove('wig');void f.offsetWidth;f.classList.add('wig')}));
+$$('#sw button').forEach(b=>b.addEventListener('click',e=>{$$('#sw button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+document.documentElement.style.setProperty('--ac',b.dataset.a);document.documentElement.style.setProperty('--sk',b.dataset.s);confetti(e.clientX,e.clientY)}));
+$$('.faq-q').forEach(q=>q.addEventListener('click',()=>{const i=q.parentElement,o=i.classList.contains('open');$$('.faq-item').forEach(x=>x.classList.remove('open'));if(!o)i.classList.add('open')}));
+
+const src='<h1>Halo dunia!</h1>\n<button class="keren">\n  Pajar\n</button>',pre=$('#pre'),prev=$('#prev');
+new IntersectionObserver((es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();
+if(rd){pre.textContent=src;prev.classList.add('go');return}
+let i=0;(function t(){pre.textContent=src.slice(0,++i)+(i<src.length?'▌':'');if(i<src.length)setTimeout(t,55);else prev.classList.add('go')})()},{threshold:.7}).observe(pre);
+
+$('#cp').addEventListener('click',e=>{const b=$('#cpb');try{navigator.clipboard.writeText('+6281511518262')}catch(_){}
+b.textContent='Tersalin!';confetti(e.clientX,e.clientY);setTimeout(()=>b.textContent='Salin nomor',1600)});
+$$('a[href*="wa.me"]').forEach(a=>a.addEventListener('click',e=>confetti(e.clientX,e.clientY)));
+
+// ===== Sticky CTA =====
+const scta=document.getElementById('scta');
+let sctaShown=false;
+addEventListener('scroll',()=>{
+  const y=scrollY;
+  const jasa=document.getElementById('jasa').offsetTop;
+  const show=y>300 && y<jasa+400;
+  if(show!==sctaShown){sctaShown=show;scta.classList.toggle('show',show)}
+},{passive:true});
+
+// ===== Counting prices =====
+const priceObs=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const el=e.target,target=+el.dataset.target;
+  if(el.dataset.done)return;el.dataset.done=1;
+  if(rd){el.textContent='Rp '+target.toLocaleString('id-ID');return}
+  const dur=1400,start=performance.now();
+  (function step(t){
+    const p=Math.min(1,(t-start)/dur);
+    const ease=1-Math.pow(1-p,3);
+    const val=Math.floor(target*ease);
+    el.textContent='Rp '+val.toLocaleString('id-ID');
+    if(p<1)requestAnimationFrame(step);
+    else{el.textContent='Rp '+target.toLocaleString('id-ID');
+      const r=el.getBoundingClientRect();
+      confetti(r.left+r.width/2,r.top+r.height/2);
+    }
+  })(start);
+}),{threshold:.5});
+$$('.price-num').forEach(el=>priceObs.observe(el));
+
+// ===== Flip card harga =====
+$$('.price').forEach(card=>{
+  const hint=card.querySelector('.flip-hint');
+  const toggle=e=>{
+    if(e&&e.target.closest('.price-btn'))return;
+    card.classList.toggle('flipped');
+    const r=card.getBoundingClientRect();
+    confetti(r.left+r.width/2,r.top+40);
+  };
+  if(hint)hint.addEventListener('click',toggle);
+  card.addEventListener('click',toggle);
+});
+
+// ===== Jelly scroll =====
+if(!rd&&!isLowEnd){
+  const targets=$$('.sec, .hero, .mqs');
+  let lastY=scrollY,jellyTimer=null;
+  const body=document.body;
+  addEventListener('scroll',()=>{
+    const dy=scrollY-lastY;lastY=scrollY;
+    const v=Math.max(-14,Math.min(14,dy*.4));
+    if(Math.abs(dy)>2){
+      body.classList.add('jelly-active');
+      const skew=v*.12;
+      const scale=1+Math.abs(v)*.0008;
+      targets.forEach((t,i)=>{
+        t.style.transform=`translateY(${v*.15}px) scaleY(${scale}) skewY(${skew}deg)`;
+      });
+      clearTimeout(jellyTimer);
+      jellyTimer=setTimeout(()=>{
+        body.classList.remove('jelly-active');
+        targets.forEach(t=>{t.style.transform='';});
+      },120);
+    }
+  },{passive:true});
+}
+
+// ===== Goyang HP =====
+if(isMobile&&!rd&&typeof DeviceMotionEvent!=='undefined'){
+  const startMotion=()=>{
+    let lastShake=0;
+    addEventListener('devicemotion',e=>{
+      const a=e.accelerationIncludingGravity;
+      if(!a)return;
+      const mag=Math.abs(a.x||0)+Math.abs(a.y||0)+Math.abs(a.z||0);
+      const now=Date.now();
+      if(mag>35&&now-lastShake>500){
+        lastShake=now;
+        document.body.animate([
+          {transform:'translate(0,0) rotate(0)'},
+          {transform:'translate(-8px,4px) rotate(-.6deg)'},
+          {transform:'translate(8px,-4px) rotate(.6deg)'},
+          {transform:'translate(-6px,-3px) rotate(-.4deg)'},
+          {transform:'translate(6px,3px) rotate(.4deg)'},
+          {transform:'translate(0,0) rotate(0)'}
+        ],{duration:600,easing:'ease-out'});
+        confetti(innerWidth/2,innerHeight/2);
+      }
+    },{passive:true});
+  };
+  if(typeof DeviceMotionEvent.requestPermission==='function'){
+    const once=()=>{DeviceMotionEvent.requestPermission().then(r=>{if(r==='granted')startMotion()}).catch(()=>{});document.removeEventListener('pointerdown',once)};
+    document.addEventListener('pointerdown',once,{once:true});
+  }else{startMotion()}
+}
+
+// ===== Time of day =====
+function applyTimeOfDay(){
+  const h=new Date().getHours();
+  const tod=$('#tod');
+  let icon,label,bg,c1;
+  if(h>=5&&h<11){icon='wb_twilight';label='Pagi';bg='#fef3c7';c1='#ffd9a3'}
+  else if(h>=11&&h<15){icon='wb_sunny';label='Siang';bg='#f4faff';c1='#7fd4ff'}
+  else if(h>=15&&h<18){icon='wb_twilight';label='Sore';bg='#ffe4cc';c1='#ff9a2f'}
+  else{icon='nights_stay';label='Malam';bg='#dbe4f5';c1='#8a5cff'}
+  tod.innerHTML=`<span class="ms">${icon}</span><span>${label}</span>`;
+  document.documentElement.style.setProperty('--bg',bg);
+  if(!document.documentElement.dataset.customColor)
+    document.documentElement.style.setProperty('--sk',c1);
+  const meta=document.querySelector('meta[name="theme-color"]')||document.createElement('meta');
+  meta.name='theme-color';meta.content=bg;document.head.appendChild(meta);
+}
+applyTimeOfDay();
+setInterval(applyTimeOfDay,60000);
+
+// ===== Door reveal =====
+const doorWrap=document.getElementById('doorWrap');
+new IntersectionObserver((es,o)=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      setTimeout(()=>doorWrap.classList.add('open'),300);
+      o.disconnect();
+    }
+  });
+},{threshold:.3}).observe(doorWrap);
+
+// ===== Logo 5x = easter egg =====
+const logo=document.getElementById('logo');
+let taps=0,lastTap=0;
+logo.addEventListener('click',()=>{
+  const now=Date.now();
+  taps=now-lastTap<600?taps+1:1;lastTap=now;
+  logo.style.transform=`rotate(${Math.random()*20-10}deg) scale(1.15)`;
+  setTimeout(()=>logo.style.transform='',200);
+  if(taps>=5){
+    taps=0;
+    document.body.animate([{transform:'scale(1)'},{transform:'scale(1.05)'},{transform:'scale(1)'}],{duration:500});
+    for(let i=0;i<80;i++)setTimeout(()=>confetti(Math.random()*innerWidth,Math.random()*innerHeight),i*20);
+  }
+});
+
+// =====================================================
+// ===== MENU + HURUF ANIMASI + PREVIEW + SWIPE =====
+// =====================================================
+const menuBtn=document.getElementById('menuBtn');
+const menuClose=document.getElementById('menuClose');
+const menuOverlay=document.getElementById('menuOverlay');
+const menuPreview=document.getElementById('menuPreview');
+const pvEmoji=document.getElementById('pvEmoji');
+const pvTitle=document.getElementById('pvTitle');
+const pvDesc=document.getElementById('pvDesc');
+const pvTag=document.getElementById('pvTag');
+
+// ===== Split huruf per-huruf =====
+document.querySelectorAll('.menu-label').forEach(label=>{
+  const text=label.dataset.text;
+  label.innerHTML='';
+  [...text].forEach((ch,i)=>{
+    const span=document.createElement('span');
+    span.className='menu-letter';
+    span.textContent=ch===' '?'\u00A0':ch;
+    // delay per huruf, plus delay per menu item (stagger)
+    const itemIdx=[...document.querySelectorAll('.menu-item')].indexOf(label.closest('.menu-item'));
+    span.style.transitionDelay=`${0.25+itemIdx*0.08+i*0.035}s`;
+    label.appendChild(span);
+  });
+});
+
+// ===== Preview data =====
+const previewData={
+  beranda:{emoji:'👋',title:'Beranda',desc:'Kenalan sama Pajar dulu yuk! Cerita singkat tentang siapa dan apa yang dikerjain.',tag:'Intro'},
+  jasa:{emoji:'💼',title:'Jasa Bikin Web',desc:'5 paket harga murah mulai 5K. Portofolio, toko, sekolah, kelas. Bisa nego!',tag:'Paling Dicari'},
+  faq:{emoji:'❓',title:'Pertanyaan Umum',desc:'Jawaban lengkap soal harga, pengerjaan, revisi, dan pembayaran.',tag:'Info'},
+  kontak:{emoji:'📱',title:'Hubungi Kami',desc:'Chat langsung via WhatsApp atau salin nomor dengan sekali sentuh.',tag:'Kontak'},
+  wa:{emoji:'💬',title:'Chat WhatsApp',desc:'Langsung ngobrol sama Pajar. Konsultasi gratis dulu, gak ada paksaan!',tag:'Online'}
+};
+
+// ===== Open / Close menu =====
+function openMenu(){
+  menuOverlay.classList.add('open');
+  menuOverlay.setAttribute('aria-hidden','false');
+  menuBtn.setAttribute('aria-expanded','true');
+  document.body.classList.add('menu-open');
+}
+function closeMenu(){
+  menuOverlay.classList.remove('open');
+  menuOverlay.setAttribute('aria-hidden','true');
+  menuBtn.setAttribute('aria-expanded','false');
+  document.body.classList.remove('menu-open');
+  hidePreview();
+}
+menuBtn.addEventListener('click',openMenu);
+menuClose.addEventListener('click',closeMenu);
+menuOverlay.addEventListener('click',e=>{if(e.target===menuOverlay)closeMenu()});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&menuOverlay.classList.contains('open'))closeMenu()});
+
+// ===== Klik menu item =====
+document.querySelectorAll('.menu-item').forEach(item=>{
+  item.addEventListener('click',e=>{
+    const href=item.getAttribute('href');
+    if(href&&href.startsWith('#')){
+      e.preventDefault();
+      closeMenu();
+      setTimeout(()=>{
+        const target=document.querySelector(href);
+        if(target){
+          const y=target.getBoundingClientRect().top+scrollY-100;
+          window.scrollTo({top:y,behavior:'smooth'});
+        }
+      },350);
+    } else {
+      setTimeout(closeMenu,200);
+    }
+  });
+
+  // ===== Hover = tampil preview =====
+  item.addEventListener('mouseenter',()=>{
+    const key=item.dataset.preview;
+    const data=previewData[key];
+    if(!data)return;
+    pvEmoji.textContent=data.emoji;
+    pvTitle.textContent=data.title;
+    pvDesc.textContent=data.desc;
+    pvTag.textContent=data.tag;
+    menuPreview.classList.add('show');
+  });
+  item.addEventListener('mouseleave',()=>{
+    menuPreview.classList.remove('show');
+  });
+});
+function hidePreview(){menuPreview.classList.remove('show')}
+
+// ===== SWIPE GESTURE =====
+// - Geser dari kiri (edge) → buka menu
+// - Geser ke kiri (saat menu kebuka) → tutup menu
+(function(){
+  let startX=0,startY=0,startTime=0,tracking=false;
+  const EDGE=40; // area tepi kiri untuk trigger open
+  const MIN_DIST=60; // jarak minimum untuk dianggap swipe
+  const MAX_TIME=600; // ms maks
+
+  addEventListener('touchstart',e=>{
+    const t=e.touches[0];
+    startX=t.clientX;startY=t.clientY;startTime=Date.now();
+    if(menuOverlay.classList.contains('open')){
+      // di dalam menu, semua area bisa swipe close
+      tracking=true;
+    } else if(startX<EDGE){
+      // di tepi kiri, tracking untuk open
+      tracking=true;
+    } else {
+      tracking=false;
+    }
+  },{passive:true});
+
+  addEventListener('touchmove',e=>{
+    if(!tracking)return;
+    const t=e.touches[0];
+    const dx=t.clientX-startX;
+    const dy=t.clientY-startY;
+    // dominan horizontal
+    if(Math.abs(dx)>Math.abs(dy)*1.2){
+      // visual feedback: geser overlay sedikit
+      if(menuOverlay.classList.contains('open')){
+        if(dx<0){
+          const progress=Math.min(1,Math.abs(dx)/200);
+          menuOverlay.style.transform=`translateX(${dx*.6}px)`;
+          menuOverlay.style.opacity=(1-progress*.6).toString();
+        }
+      } else {
+        if(dx>0&&startX<EDGE){
+          const progress=Math.min(1,dx/200);
+          // preview halus: geser hint indicator
+        }
+      }
+    }
+  },{passive:true});
+
+  addEventListener('touchend',e=>{
+    if(!tracking)return;
+    tracking=false;
+    const t=e.changedTouches[0];
+    const dx=t.clientX-startX;
+    const dy=t.clientY-startY;
+    const dt=Date.now()-startTime;
+    // reset transform
+    menuOverlay.style.transform='';
+    menuOverlay.style.opacity='';
+
+    if(dt>MAX_TIME)return;
+    const horiz=Math.abs(dx)>Math.abs(dy)*1.2;
+
+    if(menuOverlay.classList.contains('open')){
+      // swipe kiri = tutup
+      if(horiz&&dx<-MIN_DIST)closeMenu();
+    } else {
+      // swipe kanan dari tepi = buka
+      if(horiz&&dx>MIN_DIST&&startX<EDGE)openMenu();
+    }
+  },{passive:true});
+
+  // ===== MOUSE DRAG untuk desktop =====
+  let mouseDown=false,mStartX=0,mStartY=0,mStartTime=0;
+  addEventListener('mousedown',e=>{
+    if(menuOverlay.classList.contains('open')){
+      mouseDown=true;mStartX=e.clientX;mStartY=e.clientY;mStartTime=Date.now();
+    }
+  });
+  addEventListener('mouseup',e=>{
+    if(!mouseDown)return;mouseDown=false;
+    const dx=e.clientX-mStartX;
+    const dy=e.clientY-mStartY;
+    const dt=Date.now()-mStartTime;
+    if(dt<600&&Math.abs(dx)>Math.abs(dy)*1.2&&dx<-80)closeMenu();
+  });
+})();
+
+// ===== Smooth scroll untuk semua anchor =====
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const href=a.getAttribute('href');
+    if(href==='#'||href.length<2)return;
+    const target=document.querySelector(href);
+    if(!target)return;
+    e.preventDefault();
+    const startY=scrollY;
+    const endY=target.getBoundingClientRect().top+scrollY-100;
+    const dist=endY-startY;
+    const dur=Math.min(1400,Math.max(600,Math.abs(dist)*.7));
+    let start;
+    function ease(t){return t<.5?16*t*t*t*t*t:1-Math.pow(-2*t+2,5)/2}
+    function step(ts){
+      if(!start)start=ts;
+      const p=Math.min(1,(ts-start)/dur);
+      scrollTo(0,startY+dist*ease(p));
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+});
+
+// Tandai custom color biar time-of-day gak nimpa
+$$('#sw button').forEach(b=>b.addEventListener('click',()=>{
+  document.documentElement.dataset.customColor='1';
+}));
+</script>
+</body>
+</html>
