@@ -18,7 +18,7 @@
   <a href="https://pajardana.netlify.app/" target="_blank">
     <img src="https://img.shields.io/badge/🌐_Kunjungi_Website-pajardana.netlify.app-6C63FF?style=for-the-badge&logo=netlify&logoColor=white" alt="Website">
   </a>
-  <a href="https://wa.me/6281234567890?text=Halo%20Pajar!%20Aku%20mau%20bikin%20website" target="_blank">
+  <a href="https://wa.me/6281511518262?text=Halo%20Pajar!%20Aku%20mau%20bikin%20website" target="_blank">
     <img src="https://img.shields.io/badge/💬_Chat_WhatsApp-Klik_Disini-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
   </a>
 </p>
@@ -247,7 +247,7 @@
 
 <!-- TOMBOL CTA BESAR -->
 <p>
-  <a href="https://wa.me/6281234567890?text=Halo%20Pajar!%20Aku%20mau%20bikin%20website" target="_blank">
+  <a href="https://wa.me/6281511518262?text=Halo%20Pajar!%20Aku%20mau%20bikin%20website" target="_blank">
     <img src="https://img.shields.io/badge/💬_CHAT_WHATSAPP_SEKARANG-25D366?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=128C7E" height="50">
   </a>
 </p>
