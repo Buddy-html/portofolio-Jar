@@ -275,7 +275,7 @@
 </p>
 
 <p style="font-family: 'Segoe UI', sans-serif; color:#888;">
-  Made with 💜 by <b style="color:#6C63FF;">Pajar</b> · © 2025
+  Made with 💜 by <b style="color:#6C63FF;">Pajar</b> · © 2026
 </p>
 
 </div>
