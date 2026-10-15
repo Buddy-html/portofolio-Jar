@@ -1,196 +1,281 @@
-<h1 align="center">
-  <span style="color:#6C63FF; font-family: 'Poppins', sans-serif; font-weight: bold;">
-    🌙 PAJAR — Calon UI Designer & Jasa Bikin Website
+<div align="center">
+
+<!-- HEADER DENGAN GRADIENT -->
+<h1>
+  <span style="font-family: 'Poppins', 'Segoe UI', sans-serif; font-size: 42px; font-weight: 900; background: linear-gradient(90deg, #6C63FF, #FF6584, #FFB86C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+    🌙 PAJAR
   </span>
 </h1>
 
-<p align="center">
+<h3>
+  <span style="font-family: 'Poppins', sans-serif; color:#6C63FF; font-weight: bold; letter-spacing: 2px;">
+    ✦ CALON UI DESIGNER & JASA BIKIN WEBSITE ✦
+  </span>
+</h3>
+
+<!-- BADGE TOMBOL -->
+<p>
   <a href="https://pajardana.netlify.app/" target="_blank">
-    <img src="https://img.shields.io/badge/🌐_Kunjungi_Website-pajardana.netlify.app-6C63FF?style=for-the-badge&logo=netlify&logoColor=white" alt="Website Pajar">
+    <img src="https://img.shields.io/badge/🌐_Kunjungi_Website-pajardana.netlify.app-6C63FF?style=for-the-badge&logo=netlify&logoColor=white" alt="Website">
+  </a>
+  <a href="https://wa.me/6281234567890?text=Halo%20Pajar!%20Aku%20mau%20bikin%20website" target="_blank">
+    <img src="https://img.shields.io/badge/💬_Chat_WhatsApp-Klik_Disini-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
   </a>
 </p>
 
----
-
-<h2 style="color:#FF6584; font-family: 'Poppins', sans-serif; font-weight: bold;">
-  ✨ Tentang Pajar
-</h2>
-
-<p style="font-family: 'Segoe UI', sans-serif; font-size: 16px; color:#333;">
-  <b>Nama lengkap:</b> <span style="color:#6C63FF;"><b>Muhamad Pajardana Kusuma</b></span><br>
-  <b>Kelas:</b> 7A SMP Al-Husein<br>
-  <b>Cita-cita:</b> <span style="color:#FF6584;"><b>UI Designer Web</b></span><br>
-  <b>Skill:</b> HTML, CSS, JavaScript, Python (kadang)
+<p>
+  <img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
 </p>
 
-<p style="font-family: 'Segoe UI', sans-serif; font-size: 15px; color:#555;">
-  Aku suka mendesain tampilan website, lalu menghidupkannya pakai kode.  
-  Halaman ini sengaja dibuat untuk <b>dimainkan</b> — ada banyak kejutan di sini! 🎉
-</p>
+</div>
 
 ---
 
-<h2 style="color:#6C63FF; font-family: 'Poppins', sans-serif; font-weight: bold;">
-  🎯 Hal yang Bikin Semangat
+<div align="center">
+
+<h2>
+  <span style="font-family: 'Poppins', sans-serif; color:#FF6584; font-weight: 900; font-size: 28px;">
+    ✨ TENTANG PAJAR ✨
+  </span>
 </h2>
 
-<table align="center">
+</div>
+
+<p style="font-family: 'Segoe UI', sans-serif; font-size: 16px; color:#333; line-height: 1.8;">
+  <b>👤 Nama lengkap:</b> <span style="color:#6C63FF;"><b>Muhamad Pajardana Kusuma</b></span><br>
+  <b>🏫 Kelas:</b> 7A SMP Al-Husein<br>
+  <b>🎯 Cita-cita:</b> <span style="color:#FF6584;"><b>UI Designer Web</b></span><br>
+  <b>💻 Skill:</b> HTML · CSS · JavaScript · Python (kadang)
+</p>
+
+> <p style="font-family: 'Segoe UI', sans-serif; font-size: 15px; color:#555; font-style: italic;">
+> "Aku suka mendesain tampilan website, lalu menghidupkannya pakai kode. Halaman ini sengaja dibuat untuk <b>dimainkan</b> — ada banyak kejutan di sini!" 🎉
+> </p>
+
+---
+
+<div align="center">
+
+<h2>
+  <span style="font-family: 'Poppins', sans-serif; color:#6C63FF; font-weight: 900; font-size: 28px;">
+    🎯 HAL YANG BIKIN SEMANGAT
+  </span>
+</h2>
+
+</div>
+
+<table align="center" style="border-collapse: separate; border-spacing: 15px;">
   <tr>
-    <td align="center">📐<br><b>Rapi</b><br><i>Tata letak bersih</i></td>
-    <td align="center">🎨<br><b>Kreatif</b><br><i>Warna & animasi</i></td>
-    <td align="center">📚<br><b>Rajin Belajar</b><br><i>Latihan kode</i></td>
-    <td align="center">👆<br><b>Peduli Pengguna</b><br><i>Enak dipakai di HP</i></td>
+    <td align="center" style="background: linear-gradient(135deg, #6C63FF, #A78BFA); padding: 20px; border-radius: 15px; color: white;">
+      <div style="font-size: 32px;">📐</div>
+      <b style="font-family: 'Poppins', sans-serif;">RAPI</b><br>
+      <i style="font-size: 12px;">Tata letak bersih</i>
+    </td>
+    <td align="center" style="background: linear-gradient(135deg, #FF6584, #FFB86C); padding: 20px; border-radius: 15px; color: white;">
+      <div style="font-size: 32px;">🎨</div>
+      <b style="font-family: 'Poppins', sans-serif;">KREATIF</b><br>
+      <i style="font-size: 12px;">Warna & animasi</i>
+    </td>
+    <td align="center" style="background: linear-gradient(135deg, #43E97B, #38F9D7); padding: 20px; border-radius: 15px; color: white;">
+      <div style="font-size: 32px;">📚</div>
+      <b style="font-family: 'Poppins', sans-serif;">RAJIN</b><br>
+      <i style="font-size: 12px;">Latihan kode</i>
+    </td>
+    <td align="center" style="background: linear-gradient(135deg, #FA709A, #FEE140); padding: 20px; border-radius: 15px; color: white;">
+      <div style="font-size: 32px;">👆</div>
+      <b style="font-family: 'Poppins', sans-serif;">PEDULI</b><br>
+      <i style="font-size: 12px;">Enak dipakai</i>
+    </td>
   </tr>
 </table>
 
 ---
 
-<h2 style="color:#FF6584; font-family: 'Poppins', sans-serif; font-weight: bold;">
-  🛠️ Bahasa yang Dipakai
+<div align="center">
+
+<h2>
+  <span style="font-family: 'Poppins', sans-serif; color:#FF6584; font-weight: 900; font-size: 28px;">
+    💼 JASA BIKIN WEBSITE
+  </span>
 </h2>
 
-<p style="font-family: 'Segoe UI', sans-serif;">
-  <b>HTML</b> — <span style="color:#E34F26;"><b>Sering</b></span><br>
-  <b>CSS</b> — <span style="color:#1572B6;"><b>Sering</b></span><br>
-  <b>JavaScript</b> — <span style="color:#F7DF1E;"><b>Sering</b></span><br>
-  <b>Python</b> — <span style="color:#3776AB;"><b>Kadang</b></span>
+<p style="font-family: 'Segoe UI', sans-serif; font-size: 15px;">
+  <b>Butuh website?</b> Pajar siap bantu! Portofolio, toko online, website sekolah, kelas, landing page, atau template siap pakai.<br>
+  <span style="color:#FF6584; font-size: 18px;"><b>Harga murah, hasil profesional, boleh request!</b></span>
+</p>
+
+</div>
+
+<h3 align="center" style="font-family: 'Poppins', sans-serif; color:#6C63FF;">🌟 YANG BISA DIBUAT 🌟</h3>
+
+<p align="center" style="font-family: 'Segoe UI', sans-serif; font-size: 15px;">
+  👤 <b>Portofolio</b> &nbsp;|&nbsp; 🏪 <b>Toko Online</b> &nbsp;|&nbsp; 🏫 <b>Sekolah</b><br>
+  👥 <b>Kelas</b> &nbsp;|&nbsp; 🚀 <b>Landing Page</b> &nbsp;|&nbsp; 📊 <b>Template Web</b>
+</p>
+
+<p align="center" style="font-family: 'Segoe UI', sans-serif;">
+  📱 Mobile &nbsp;·&nbsp; 💻 PC &nbsp;·&nbsp; 🖥️ Laptop &nbsp;·&nbsp; 📟 Tablet<br>
+  <b style="color:#6C63FF;">Support semua device!</b>
 </p>
 
 ---
 
-<h2 style="color:#6C63FF; font-family: 'Poppins', sans-serif; font-weight: bold;">
-  💼 Jasa Bikin Website
+<div align="center">
+
+<h2>
+  <span style="font-family: 'Poppins', sans-serif; color:#6C63FF; font-weight: 900; font-size: 28px;">
+    💰 PAKET HARGA
+  </span>
 </h2>
 
-<p style="font-family: 'Segoe UI', sans-serif;">
-  <b>Butuh website?</b> Pajar siap bantu!  
-  Portofolio, toko online, website sekolah, kelas, landing page, atau template siap pakai.  
-  <span style="color:#FF6584;"><b>Harga murah, hasil profesional, boleh request!</b></span>
-</p>
+</div>
 
-<h3 style="color:#333; font-family: 'Poppins', sans-serif;">Yang Bisa Dibuat 👇</h3>
-
-<ul style="font-family: 'Segoe UI', sans-serif;">
-  <li>👤 Portofolio</li>
-  <li>🏪 Toko Online</li>
-  <li>🏫 Sekolah</li>
-  <li>👥 Kelas</li>
-  <li>🚀 Landing Page</li>
-  <li>📊 Template Web</li>
-</ul>
-
-<p style="font-family: 'Segoe UI', sans-serif;">
-  📱 Mobile &nbsp; 💻 PC &nbsp; 🖥️ Laptop &nbsp; 📟 Tablet<br>
-  <b>Support semua device!</b> Tampilan rapi di HP sampai laptop.
-</p>
-
----
-
-<h2 style="color:#FF6584; font-family: 'Poppins', sans-serif; font-weight: bold;">
-  💰 Paket Harga
-</h2>
-
-<table align="center" style="font-family: 'Segoe UI', sans-serif; border-collapse: collapse; width: 90%;">
-  <tr style="background-color: #6C63FF; color: white;">
-    <th style="padding: 10px;">Paket</th>
-    <th style="padding: 10px;">Harga</th>
-    <th style="padding: 10px;">Fitur</th>
-  </tr>
-  <tr>
-    <td style="padding: 8px;"><b>Starter</b></td>
-    <td style="padding: 8px; color:#FF6584;"><b>Rp 5.000</b></td>
-    <td style="padding: 8px;">1 halaman, desain basic, form kontak, responsive</td>
-  </tr>
-  <tr style="background-color: #F9F9F9;">
-    <td style="padding: 8px;"><b>Hemat</b> 🔥</td>
-    <td style="padding: 8px; color:#FF6584;"><b>Rp 10.000</b></td>
-    <td style="padding: 8px;">2-3 halaman, desain custom, galeri, animasi ringan</td>
-  </tr>
-  <tr>
-    <td style="padding: 8px;"><b>Favorite</b></td>
-    <td style="padding: 8px; color:#FF6584;"><b>Rp 20.000</b></td>
-    <td style="padding: 8px;">3-5 halaman, animasi scroll, galeri interaktif, SEO basic</td>
-  </tr>
-  <tr style="background-color: #F9F9F9;">
-    <td style="padding: 8px;"><b>Pro</b></td>
-    <td style="padding: 8px; color:#FF6584;"><b>Rp 35.000</b></td>
-    <td style="padding: 8px;">Unlimited halaman, animasi keren, dark mode, revisi 3x</td>
-  </tr>
-  <tr>
-    <td style="padding: 8px;"><b>Sultan</b> 👑</td>
-    <td style="padding: 8px; color:#FF6584;"><b>Rp 50.000</b></td>
-    <td style="padding: 8px;">Semua fitur Pro + custom animasi, admin panel, maintenance 1 bulan</td>
-  </tr>
+<table align="center" style="font-family: 'Segoe UI', sans-serif; border-collapse: collapse; width: 95%; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <thead>
+    <tr style="background: linear-gradient(90deg, #6C63FF, #FF6584); color: white;">
+      <th style="padding: 12px; border-radius: 10px 0 0 0;">Paket</th>
+      <th style="padding: 12px;">Harga</th>
+      <th style="padding: 12px; border-radius: 0 10px 0 0;">Fitur</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color: #F9F9FF;">
+      <td style="padding: 12px;"><b>🌱 Starter</b></td>
+      <td style="padding: 12px; color:#FF6584;"><b>Rp 5.000</b></td>
+      <td style="padding: 12px;">1 halaman, desain basic, form kontak, responsive</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px;"><b>⭐ Hemat</b> 🔥</td>
+      <td style="padding: 12px; color:#FF6584;"><b>Rp 10.000</b></td>
+      <td style="padding: 12px;">2-3 halaman, desain custom, galeri, animasi ringan</td>
+    </tr>
+    <tr style="background-color: #F9F9FF;">
+      <td style="padding: 12px;"><b>💎 Favorite</b></td>
+      <td style="padding: 12px; color:#FF6584;"><b>Rp 20.000</b></td>
+      <td style="padding: 12px;">3-5 halaman, animasi scroll, galeri interaktif, SEO basic</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px;"><b>🚀 Pro</b></td>
+      <td style="padding: 12px; color:#FF6584;"><b>Rp 35.000</b></td>
+      <td style="padding: 12px;">Unlimited halaman, animasi keren, dark mode, revisi 3x</td>
+    </tr>
+    <tr style="background: linear-gradient(90deg, #FFD700, #FFA500); color: white;">
+      <td style="padding: 12px;"><b>👑 SULTAN</b></td>
+      <td style="padding: 12px;"><b>Rp 50.000</b></td>
+      <td style="padding: 12px;">Semua fitur Pro + custom animasi, admin panel, maintenance 1 bulan</td>
+    </tr>
+  </tbody>
 </table>
 
-<p align="center" style="font-family: 'Segoe UI', sans-serif; color:#555;">
-  <b>🤝 Bisa nego!</b> Yang penting cocok, harga bisa dibicarakan 😄
+<p align="center" style="font-family: 'Segoe UI', sans-serif; font-size: 16px; color:#555;">
+  🤝 <b>Bisa nego!</b> Yang penting cocok, harga bisa dibicarakan 😄
 </p>
 
 ---
 
-<h2 style="color:#6C63FF; font-family: 'Poppins', sans-serif; font-weight: bold;">
-  ❓ FAQ
+<div align="center">
+
+<h2>
+  <span style="font-family: 'Poppins', sans-serif; color:#FF6584; font-weight: 900; font-size: 28px;">
+    ❓ FAQ — TANYA JAWAB
+  </span>
 </h2>
 
-<details style="font-family: 'Segoe UI', sans-serif;">
-  <summary><b>Siapa Pajar?</b></summary>
-  Muhamad Pajardana Kusuma, siswa kelas 7A di SMP Al-Husein.
+</div>
+
+<details style="font-family: 'Segoe UI', sans-serif; margin-bottom: 8px;">
+  <summary><b>👤 Siapa Pajar?</b></summary>
+  <p>Muhamad Pajardana Kusuma, siswa kelas 7A di SMP Al-Husein.</p>
 </details>
 
-<details style="font-family: 'Segoe UI', sans-serif;">
-  <summary><b>Pakai bahasa apa?</b></summary>
-  HTML, CSS, JavaScript. Python kadang-kadang.
+<details style="font-family: 'Segoe UI', sans-serif; margin-bottom: 8px;">
+  <summary><b>💻 Pakai bahasa apa?</b></summary>
+  <p>HTML, CSS, JavaScript. Python kadang-kadang.</p>
 </details>
 
-<details style="font-family: 'Segoe UI', sans-serif;">
-  <summary><b>Jasa bikin web mulai berapa?</b></summary>
-  Mulai dari <b>5 ribu</b> aja! Ada 5 paket: Starter, Hemat, Favorite, Pro, Sultan.
+<details style="font-family: 'Segoe UI', sans-serif; margin-bottom: 8px;">
+  <summary><b>💰 Jasa bikin web mulai berapa?</b></summary>
+  <p>Mulai dari <b>5 ribu</b> aja! Ada 5 paket: Starter, Hemat, Favorite, Pro, Sultan.</p>
 </details>
 
-<details style="font-family: 'Segoe UI', sans-serif;">
-  <summary><b>Berapa lama pengerjaannya?</b></summary>
-  Starter 1-2 hari, Hemat 2-3 hari, Favorite 3-5 hari, Pro & Sultan 5-10 hari.
+<details style="font-family: 'Segoe UI', sans-serif; margin-bottom: 8px;">
+  <summary><b>⏱️ Berapa lama pengerjaannya?</b></summary>
+  <p>Starter 1-2 hari, Hemat 2-3 hari, Favorite 3-5 hari, Pro & Sultan 5-10 hari.</p>
 </details>
 
-<details style="font-family: 'Segoe UI', sans-serif;">
-  <summary><b>Bisa revisi berapa kali?</b></summary>
-  Starter & Hemat: 1x. Favorite: 2x. Pro: 3x. Sultan: revisi sampai puas.
+<details style="font-family: 'Segoe UI', sans-serif; margin-bottom: 8px;">
+  <summary><b>🔄 Bisa revisi berapa kali?</b></summary>
+  <p>Starter & Hemat: 1x. Favorite: 2x. Pro: 3x. Sultan: revisi sampai puas.</p>
 </details>
 
-<details style="font-family: 'Segoe UI', sans-serif;">
-  <summary><b>Pembayarannya gimana?</b></summary>
-  Transfer bank atau e-wallet (DANA, OVO, GoPay). DP 50% dulu.
+<details style="font-family: 'Segoe UI', sans-serif; margin-bottom: 8px;">
+  <summary><b>💳 Pembayarannya gimana?</b></summary>
+  <p>Transfer bank atau e-wallet (DANA, OVO, GoPay). DP 50% dulu.</p>
 </details>
 
-<details style="font-family: 'Segoe UI', sans-serif;">
-  <summary><b>Bisa request desain sendiri?</b></summary>
-  Boleh banget! Kasih referensi atau sketsa.
+<details style="font-family: 'Segoe UI', sans-serif; margin-bottom: 8px;">
+  <summary><b>🎨 Bisa request desain sendiri?</b></summary>
+  <p>Boleh banget! Kasih referensi atau sketsa.</p>
 </details>
 
-<details style="font-family: 'Segoe UI', sans-serif;">
-  <summary><b>Webnya bisa dibuka di HP?</b></summary>
-  Pasti! Semua paket responsive.
+<details style="font-family: 'Segoe UI', sans-serif; margin-bottom: 8px;">
+  <summary><b>📱 Webnya bisa dibuka di HP?</b></summary>
+  <p>Pasti! Semua paket responsive.</p>
 </details>
 
-<details style="font-family: 'Segoe UI', sans-serif;">
-  <summary><b>Cita-citanya apa?</b></summary>
-  Jadi UI designer web yang bikin tampilan enak dilihat dan mudah dipakai.
+<details style="font-family: 'Segoe UI', sans-serif; margin-bottom: 8px;">
+  <summary><b>🌟 Cita-citanya apa?</b></summary>
+  <p>Jadi UI designer web yang bikin tampilan enak dilihat dan mudah dipakai.</p>
 </details>
 
 ---
 
-<h2 align="center" style="color:#6C63FF; font-family: 'Poppins', sans-serif; font-weight: bold;">
-  🚀 Siap Mulai?
+<div align="center">
+
+<h2>
+  <span style="font-family: 'Poppins', sans-serif; font-size: 34px; font-weight: 900; background: linear-gradient(90deg, #6C63FF, #FF6584); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+    🚀 SIAP MULAI?
+  </span>
 </h2>
 
-<p align="center" style="font-family: 'Segoe UI', sans-serif; font-size: 16px;">
-  Punya ide website? Kirim pesan ke Pajar!<br>
-  <a href="https://pajardana.netlify.app/" target="_blank" style="color:#FF6584; font-weight: bold;">
-    🌐 pajardana.netlify.app
+<p style="font-family: 'Segoe UI', sans-serif; font-size: 17px;">
+  Punya ide website? <b>Kirim pesan ke Pajar sekarang!</b>
+</p>
+
+<!-- TOMBOL CTA BESAR -->
+<p>
+  <a href="https://wa.me/6281234567890?text=Halo%20Pajar!%20Aku%20mau%20bikin%20website" target="_blank">
+    <img src="https://img.shields.io/badge/💬_CHAT_WHATSAPP_SEKARANG-25D366?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=128C7E" height="50">
   </a>
 </p>
 
-<p align="center">
-  <b style="color:#6C63FF;">Jasa Web Mulai 5K</b> · Bisa nego · Support semua device
+<p>
+  <a href="https://pajardana.netlify.app/" target="_blank">
+    <img src="https://img.shields.io/badge/🌐_LIHAT_WEBSITE-6C63FF?style=for-the-badge&logo=netlify&logoColor=white" height="40">
+  </a>
 </p>
+
+<p style="font-family: 'Poppins', sans-serif;">
+  <b style="color:#6C63FF; font-size: 18px;">Jasa Web Mulai 5K</b><br>
+  <i style="color:#888;">Bisa nego · Support semua device</i>
+</p>
+
+</div>
+
+---
+
+<!-- FOOTER -->
+<div align="center">
+
+<p>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=120&section=footer&text=Terima%20Kasih!&fontSize=30&fontColor=ffffff&animation=twinkling" width="100%">
+</p>
+
+<p style="font-family: 'Segoe UI', sans-serif; color:#888;">
+  Made with 💜 by <b style="color:#6C63FF;">Pajar</b> · © 2025
+</p>
+
+</div>
