@@ -24,7 +24,6 @@ a{color:var(--ac);text-decoration:none}button{font-family:inherit;color:inherit}
 @media(min-width:441px){.page{border-left:4px solid var(--ink);border-right:4px solid var(--ink);max-width:448px}}
 .topbar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;padding-top:calc(14px + env(safe-area-inset-top,0px));background:rgba(244,250,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:3px solid var(--ink)}
 .brand{display:flex;align-items:center;gap:8px}.brand-name{font-weight:800;font-size:19px;letter-spacing:.06em}
-/* Logo gambar baru */
 .chip-yx{width:38px;height:38px;border-radius:11px;background:var(--sk);border:2.5px solid var(--ink);box-shadow:2px 2px 0 var(--ink);display:flex;align-items:center;justify-content:center;overflow:hidden;transform:rotate(-6deg);transition:transform .4s;cursor:pointer;user-select:none;padding:0}
 .chip-yx img{width:100%;height:100%;object-fit:cover;display:block}
 .btn-back{width:40px;height:40px;border-radius:12px;background:#fff;border:2.5px solid var(--ink);box-shadow:2px 2px 0 var(--ink);display:flex;align-items:center;justify-content:center;color:var(--ink);cursor:pointer}.btn-back .ms{font-size:22px}
@@ -74,7 +73,7 @@ a{color:var(--ac);text-decoration:none}button{font-family:inherit;color:inherit}
 .link-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .link-card{padding:14px 12px;display:flex;flex-direction:column;gap:8px;background:#fff;border:2.5px solid var(--ink);border-radius:16px;box-shadow:3px 3px 0 var(--ink);color:var(--ink);text-align:left;font-size:inherit;cursor:pointer}a.link-card:hover{color:var(--ink)}
 .link-ico{width:38px;height:38px;border-radius:12px;background:var(--sk);border:2.5px solid var(--ink);display:flex;align-items:center;justify-content:center}.link-ico .ms{font-size:22px;color:#fff}
-.link-card b{font-weight:800;font-size:16px;line-height:1}.link-card small{font-weight:600;font-size:12px;color:#5f7f9f}
+.link-card b{font-weight:800;font-size:16px;line-height:1}.link-card small{font-weight:600;font-size:12px;color:#5f7f9f;word-break:break-all;line-height:1.25}
 .cta{margin:0 20px 30px;padding:24px 20px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;background:var(--sk);border:3px solid var(--ink);border-radius:24px;box-shadow:6px 6px 0 var(--ink)}
 .cta-t{font-weight:800;font-size:30px;line-height:1.05;color:#fff;-webkit-text-stroke:1.5px var(--ink)}.cta-d{font-weight:600;font-size:16px}
 .cta-btn{align-self:stretch;height:58px;border-radius:16px;background:#fff;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);color:var(--ink);font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;gap:8px}.cta-btn .ms{font-size:22px;color:var(--ac)}
@@ -193,23 +192,14 @@ a.fab:hover{color:#fff}.fab .ms{font-size:28px}@keyframes shake{0%,86%,100%{tran
 .menu-item:hover .menu-arrow{opacity:1;transform:none}
 .menu-item.highlight .menu-arrow{opacity:.7;transform:none}
 
-/* Animasi huruf per-huruf */
-.menu-letter{
-  display:inline-block;
-  opacity:0;
-  transform:translateY(60px) rotate(15deg);
-  transition:opacity .5s cubic-bezier(.3,1.4,.5,1),transform .6s cubic-bezier(.3,1.4,.5,1);
-}
-.menu-overlay.open .menu-letter{
-  opacity:1;
-  transform:none;
-}
+.menu-letter{display:inline-block;opacity:0;transform:translateY(60px) rotate(15deg);transition:opacity .5s cubic-bezier(.3,1.4,.5,1),transform .6s cubic-bezier(.3,1.4,.5,1)}
+.menu-overlay.open .menu-letter{opacity:1;transform:none}
 .menu-item{opacity:0;transition:opacity .3s}
 .menu-overlay.open .menu-item{opacity:1;transition-delay:.25s}
 
 .menu-footer{display:flex;flex-direction:column;gap:12px;align-items:center;opacity:0;transform:translateY(20px);transition:opacity .5s .6s,transform .5s .6s;position:relative;z-index:1}
 .menu-overlay.open .menu-footer{opacity:1;transform:none}
-.menu-social{display:flex;gap:12px}
+.menu-social{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 .menu-social a{width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.1);border:2.5px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .2s,transform .15s}
 .menu-social a:hover{background:rgba(127,212,255,.25);transform:translateY(-3px);color:#fff}
 .menu-social .ms{font-size:22px}
@@ -218,117 +208,111 @@ a.fab:hover{color:#fff}.fab .ms{font-size:28px}@keyframes shake{0%,86%,100%{tran
 body.menu-open{overflow:hidden}
 
 /* ==== Preview Section (hover) ==== */
-.menu-preview{
-  position:fixed;
-  right:calc((100vw - min(100vw,440px)) / 2 + 20px);
-  top:50%;
-  transform:translateY(-50%) translateX(40px) scale(.9);
-  width:220px;
-  padding:16px;
-  background:rgba(255,255,255,.95);
-  border:3px solid var(--ink);
-  border-radius:18px;
-  box-shadow:6px 6px 0 var(--ink);
-  opacity:0;
-  pointer-events:none;
-  transition:opacity .35s,transform .35s cubic-bezier(.3,1.4,.5,1);
-  z-index:101;
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-}
-.menu-preview.show{
-  opacity:1;
-  transform:translateY(-50%) translateX(0) scale(1);
-}
+.menu-preview{position:fixed;right:calc((100vw - min(100vw,440px)) / 2 + 20px);top:50%;transform:translateY(-50%) translateX(40px) scale(.9);width:220px;padding:16px;background:rgba(255,255,255,.95);border:3px solid var(--ink);border-radius:18px;box-shadow:6px 6px 0 var(--ink);opacity:0;pointer-events:none;transition:opacity .35s,transform .35s cubic-bezier(.3,1.4,.5,1);z-index:101;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.menu-preview.show{opacity:1;transform:translateY(-50%) translateX(0) scale(1)}
 .preview-emoji{font-size:40px;line-height:1;margin-bottom:6px}
 .preview-title{font-weight:800;font-size:17px;line-height:1.15;margin:0 0 4px}
 .preview-desc{font-weight:600;font-size:12px;line-height:1.35;color:#5f7f9f;margin:0}
 .preview-tag{display:inline-block;margin-top:8px;padding:3px 10px;background:var(--sk);border:2px solid var(--ink);border-radius:8px;font-weight:800;font-size:11px;color:#fff;-webkit-text-stroke:.8px var(--ink)}
 
-/* Swipe indicator */
-.swipe-hint{
-  position:fixed;
-  left:0;
-  top:50%;
-  transform:translateY(-50%);
-  width:6px;
-  height:80px;
-  background:var(--ac);
-  border-radius:0 8px 8px 0;
-  z-index:7;
-  opacity:0;
-  animation:swipePulse 3s ease-in-out infinite;
-  pointer-events:none;
-}
-@keyframes swipePulse{
-  0%,100%{opacity:0;transform:translateY(-50%) translateX(-6px)}
-  50%{opacity:.6;transform:translateY(-50%) translateX(0)}
-}
+.swipe-hint{position:fixed;left:0;top:50%;transform:translateY(-50%);width:6px;height:80px;background:var(--ac);border-radius:0 8px 8px 0;z-index:7;opacity:0;animation:swipePulse 3s ease-in-out infinite;pointer-events:none}
+@keyframes swipePulse{0%,100%{opacity:0;transform:translateY(-50%) translateX(-6px)}50%{opacity:.6;transform:translateY(-50%) translateX(0)}}
 body.menu-open .swipe-hint{display:none}
 
-@media(max-width:360px){.menu-item{font-size:32px;padding:12px 10px}.menu-preview{width:180px}}
+/* ==== Social Media Section ==== */
+.social-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.social-card{display:flex;align-items:center;gap:10px;padding:14px;background:#fff;border:2.5px solid var(--ink);border-radius:16px;box-shadow:3px 3px 0 var(--ink);color:var(--ink);transition:transform .15s,box-shadow .15s;cursor:pointer}
+.social-card:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);color:var(--ink)}
+.social-card .sc-ico{width:40px;height:40px;flex-shrink:0;border-radius:12px;display:flex;align-items:center;justify-content:center;border:2.5px solid var(--ink);color:#fff}
+.social-card .sc-ico .ms{font-size:24px}
+.social-card .sc-txt{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+.social-card .sc-txt b{font-weight:800;font-size:15px}
+.social-card .sc-txt small{font-weight:600;font-size:11px;color:#5f7f9f;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
+/* ==== Support & Share Section ==== */
+.support-card{background:linear-gradient(135deg,#fff8d6,#ffe4cc);border:3px solid var(--ink);border-radius:22px;box-shadow:5px 5px 0 var(--ink);padding:20px 18px;display:flex;flex-direction:column;gap:14px}
+.support-card .sup-title{font-weight:800;font-size:22px;line-height:1.1;display:flex;align-items:center;gap:8px}
+.support-card .sup-title .ms{font-size:26px;color:#ff9a2f}
+.support-card .sup-desc{font-weight:600;font-size:14px;line-height:1.35;color:#3a5674;margin:0}
+.share-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.share-btn{display:flex;align-items:center;gap:8px;padding:12px 14px;background:#fff;border:2.5px solid var(--ink);border-radius:14px;box-shadow:3px 3px 0 var(--ink);font-weight:800;font-size:14px;color:var(--ink);cursor:pointer;transition:transform .12s,box-shadow .12s;text-decoration:none}
+.share-btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);color:var(--ink)}
+.share-btn:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--ink)}
+.share-btn .ms{font-size:20px;flex-shrink:0}
+.share-btn.wa{background:#25d366;color:#fff}
+.share-btn.wa .ms{color:#fff}
+.share-btn.wa:hover{color:#fff}
+.share-btn.x{background:#000;color:#fff}
+.share-btn.x .ms{color:#fff}
+.share-btn.x:hover{color:#fff}
+.share-btn.tg{background:#2aabee;color:#fff}
+.share-btn.tg .ms{color:#fff}
+.share-btn.tg:hover{color:#fff}
+.share-btn.fb{background:#1877f2;color:#fff}
+.share-btn.fb .ms{color:#fff}
+.share-btn.fb:hover{color:#fff}
+.share-btn.star{background:#ffe45e;color:var(--ink)}
+.share-btn.star:hover{color:var(--ink)}
+.star-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;height:54px;border-radius:16px;background:#0d2a4a;color:#ffe45e;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);font-weight:800;font-size:16px;cursor:pointer;transition:transform .12s,box-shadow .12s}
+.star-btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.star-btn:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--ink)}
+.star-btn .ms{font-size:24px}
+
+/* Toast */
+.toast{position:fixed;left:50%;bottom:calc(90px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:#fff;font-weight:800;font-size:14px;padding:12px 20px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:200;display:flex;align-items:center;gap:8px;max-width:90vw}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast .ms{font-size:20px;color:#7fd4ff}
+
+@media(max-width:360px){.menu-item{font-size:32px;padding:12px 10px}.menu-preview{width:180px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}.meter i{width:var(--w)}.w>span{transform:none!important}html{scroll-behavior:auto}.door{display:none}.menu-letter{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 
-<!-- Swipe hint indicator (kiri layar) -->
 <div class="swipe-hint" aria-hidden="true"></div>
 
 <!-- Fullscreen Menu -->
 <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
   <div class="menu-bg-shapes" aria-hidden="true">
-    <div class="shape s1"></div>
-    <div class="shape s2"></div>
-    <div class="shape s3"></div>
-    <div class="shape s4"></div>
+    <div class="shape s1"></div><div class="shape s2"></div><div class="shape s3"></div><div class="shape s4"></div>
   </div>
 
   <button class="menu-close press" id="menuClose" aria-label="Tutup menu">
-    <span class="ms">arrow_back</span>
-    <span>Kembali</span>
+    <span class="ms">arrow_back</span><span>Kembali</span>
   </button>
 
   <nav class="menu-nav">
     <a href="#kenal" class="menu-item" data-preview="beranda">
-      <span class="menu-num">01</span>
-      <span class="menu-label" data-text="Beranda"></span>
-      <span class="ms menu-arrow">arrow_outward</span>
+      <span class="menu-num">01</span><span class="menu-label" data-text="Beranda"></span><span class="ms menu-arrow">arrow_outward</span>
     </a>
     <a href="#jasa" class="menu-item" data-preview="jasa">
-      <span class="menu-num">02</span>
-      <span class="menu-label" data-text="Jasa Web"></span>
-      <span class="ms menu-arrow">arrow_outward</span>
+      <span class="menu-num">02</span><span class="menu-label" data-text="Jasa Web"></span><span class="ms menu-arrow">arrow_outward</span>
+    </a>
+    <a href="#support" class="menu-item" data-preview="support">
+      <span class="menu-num">03</span><span class="menu-label" data-text="Support"></span><span class="ms menu-arrow">arrow_outward</span>
     </a>
     <a href="#faq" class="menu-item" data-preview="faq">
-      <span class="menu-num">03</span>
-      <span class="menu-label" data-text="FAQ"></span>
-      <span class="ms menu-arrow">arrow_outward</span>
+      <span class="menu-num">04</span><span class="menu-label" data-text="FAQ"></span><span class="ms menu-arrow">arrow_outward</span>
     </a>
     <a href="#kontak" class="menu-item" data-preview="kontak">
-      <span class="menu-num">04</span>
-      <span class="menu-label" data-text="Kontak"></span>
-      <span class="ms menu-arrow">arrow_outward</span>
+      <span class="menu-num">05</span><span class="menu-label" data-text="Kontak"></span><span class="ms menu-arrow">arrow_outward</span>
     </a>
     <a href="https://wa.me/6281511518262?text=Halo%20Pajar!" target="_blank" rel="noopener" class="menu-item highlight" data-preview="wa">
-      <span class="menu-num">05</span>
-      <span class="menu-label" data-text="Chat WA"></span>
-      <span class="ms menu-arrow">chat</span>
+      <span class="menu-num">06</span><span class="menu-label" data-text="Chat WA"></span><span class="ms menu-arrow">chat</span>
     </a>
   </nav>
 
   <div class="menu-footer">
     <div class="menu-social">
-      <a href="https://wa.me/6281511518262" target="_blank" aria-label="WhatsApp"><span class="ms">chat</span></a>
-      <a href="#" aria-label="Instagram"><span class="ms">photo_camera</span></a>
-      <a href="#" aria-label="Email"><span class="ms">mail</span></a>
+      <a href="https://wa.me/6281511518262" target="_blank" rel="noopener" aria-label="WhatsApp"><span class="ms">chat</span></a>
+      <a href="https://github.com/Buddy-html" target="_blank" rel="noopener" aria-label="GitHub"><span class="ms">code</span></a>
+      <a href="https://www.linkedin.com/in/muhamad-pajardana-kusuma" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="ms">work</span></a>
+      <a href="mailto:Muhamad.pajardana@gmail.com" aria-label="Email"><span class="ms">mail</span></a>
     </div>
     <p class="menu-copy">© 2026 Pajar · Kelas 7A Al-Husein</p>
   </div>
 </div>
 
-<!-- Preview card (muncul saat hover menu item) -->
 <div class="menu-preview" id="menuPreview" aria-hidden="true">
   <div class="preview-emoji" id="pvEmoji">👋</div>
   <div class="preview-title" id="pvTitle">Beranda</div>
@@ -411,10 +395,7 @@ body.menu-open .swipe-hint{display:none}
         <div class="svc"><span class="ms">dashboard</span><b>Template Web</b></div>
       </div>
       <div class="chip-row">
-        <span class="chip">📱 Mobile</span>
-        <span class="chip alt">💻 PC</span>
-        <span class="chip">🖥️ Laptop</span>
-        <span class="chip alt">📟 Tablet</span>
+        <span class="chip">📱 Mobile</span><span class="chip alt">💻 PC</span><span class="chip">🖥️ Laptop</span><span class="chip alt">📟 Tablet</span>
       </div>
       <p class="sub" style="margin:0;text-align:center">Support semua device. Tampilan rapi di HP sampai laptop.</p>
     </div>
@@ -489,6 +470,42 @@ body.menu-open .swipe-hint{display:none}
     </div>
   </section>
 
+  <!-- ===== SUPPORT & POPULERKAN ===== -->
+  <section class="sec" id="support">
+    <div class="h2 rv">Support & Populerkan</div>
+    <p class="sub rv">Suka halaman ini? Bantu Pajar biar makin dikenal! Share ke teman atau kasih bintang di GitHub. Gratis, cuma butuh 5 detik 😄</p>
+
+    <div class="support-card rv">
+      <div class="sup-title"><span class="ms">campaign</span> Bagikan halaman ini</div>
+      <p class="sup-desc">Pilih cara share favoritmu. Sekali klik langsung ke aplikasinya.</p>
+      <div class="share-grid">
+        <a href="#" id="shareWA" class="share-btn wa" target="_blank" rel="noopener"><span class="ms">chat</span> WhatsApp</a>
+        <a href="#" id="shareX" class="share-btn x" target="_blank" rel="noopener"><span class="ms">tag</span> Twitter/X</a>
+        <a href="#" id="shareTG" class="share-btn tg" target="_blank" rel="noopener"><span class="ms">send</span> Telegram</a>
+        <a href="#" id="shareFB" class="share-btn fb" target="_blank" rel="noopener"><span class="ms">public</span> Facebook</a>
+      </div>
+      <button class="share-btn star" id="shareCopy" style="justify-content:center"><span class="ms">link</span> Salin link halaman</button>
+      <button class="share-btn" id="shareNative" style="justify-content:center;background:#fff"><span class="ms">ios_share</span> Share pakai HP</button>
+    </div>
+
+    <div class="support-card rv" style="background:linear-gradient(135deg,#dff3ff,#c7e8ff)">
+      <div class="sup-title"><span class="ms">star</span> Kasih bintang di GitHub</div>
+      <p class="sup-desc">Kalau kamu suka cara Pajar bikin web, kasih ⭐ di repo GitHub-nya. Itu bikin Pajar makin semangat belajar!</p>
+      <a href="https://github.com/Buddy-html/portofolio-Jar" target="_blank" rel="noopener" class="star-btn"><span class="ms">star</span> ⭐ Star di GitHub</a>
+      <a href="https://github.com/Buddy-html" target="_blank" rel="noopener" class="share-btn" style="justify-content:center;background:#0d2a4a;color:#fff"><span class="ms" style="color:#fff">person_add</span> Follow @Buddy-html</a>
+    </div>
+
+    <div class="card rv" style="background:#fff8d6">
+      <div class="card-t">💡 Kenapa bantu share?</div>
+      <div class="perks">
+        <div class="perk"><span class="ms">trending_up</span><span>Bikin Pajar makin dikenal sebagai <b>UI designer muda</b></span></div>
+        <div class="perk"><span class="ms">handshake</span><span>Bantu teman yang butuh <b>jasa bikin web murah</b></span></div>
+        <div class="perk"><span class="ms">favorite</span><span>Support pelajar yang lagi <b>belajar ngoding</b></span></div>
+        <div class="perk"><span class="ms">emoji_events</span><span>Semoga rezekinya <b>balik ke kamu</b> juga ✨</span></div>
+      </div>
+    </div>
+  </section>
+
   <section class="sec">
     <div class="h2 rv">Studio warna</div>
     <p class="sub rv">Calon UI designer harus bisa main warna. Pilih satu, lihat tampilan seluruh halaman ini berubah.</p>
@@ -542,11 +559,36 @@ body.menu-open .swipe-hint{display:none}
     </div>
   </section>
 
+  <!-- ===== KONTAK & SOCIAL MEDIA ===== -->
   <section class="sec" id="kontak">
-    <div class="h2 rv">Hubungi Kami</div>
-    <div class="link-grid">
-      <a href="https://wa.me/6281511518262?text=Halo%20Pajar!" target="_blank" rel="noopener" class="link-card press rv"><div class="link-ico" style="background:#25d366"><span class="ms">chat</span></div><b>WhatsApp</b><small>+62 815-1151-8262</small></a>
-      <button class="link-card press rv" id="cp" style="--d:.1s"><div class="link-ico" style="background:#ff8fab"><span class="ms">content_copy</span></div><b id="cpb">Salin nomor</b><small>Sekali sentuh</small></button>
+    <div class="h2 rv">Hubungi & Sosial Media</div>
+    <p class="sub rv">Mau ngobrol, lihat project, atau connect profesional? Semua ada di sini.</p>
+
+    <div class="social-grid">
+      <a href="https://wa.me/6281511518262?text=Halo%20Pajar!" target="_blank" rel="noopener" class="social-card press rv">
+        <div class="sc-ico" style="background:#25d366"><span class="ms">chat</span></div>
+        <div class="sc-txt"><b>WhatsApp</b><small>+62 815-1151-8262</small></div>
+      </a>
+      <a href="https://github.com/Buddy-html" target="_blank" rel="noopener" class="social-card press rv" style="--d:.05s">
+        <div class="sc-ico" style="background:#0d2a4a"><span class="ms">code</span></div>
+        <div class="sc-txt"><b>GitHub</b><small>@Buddy-html</small></div>
+      </a>
+      <a href="https://www.linkedin.com/in/muhamad-pajardana-kusuma" target="_blank" rel="noopener" class="social-card press rv" style="--d:.1s">
+        <div class="sc-ico" style="background:#0a66c2"><span class="ms">work</span></div>
+        <div class="sc-txt"><b>LinkedIn</b><small>Muhamad Pajardana Kusuma</small></div>
+      </a>
+      <a href="mailto:Muhamad.pajardana@gmail.com" class="social-card press rv" style="--d:.15s">
+        <div class="sc-ico" style="background:#ff6f93"><span class="ms">mail</span></div>
+        <div class="sc-txt"><b>Email</b><small>Muhamad.pajardana@gmail.com</small></div>
+      </a>
+      <button class="social-card press rv" id="cp" style="--d:.2s;text-align:left;font-family:inherit;width:100%">
+        <div class="sc-ico" style="background:#ff9a2f"><span class="ms">content_copy</span></div>
+        <div class="sc-txt"><b id="cpb">Salin nomor</b><small>Sekali sentuh</small></div>
+      </button>
+      <a href="https://github.com/Buddy-html/portofolio-Jar" target="_blank" rel="noopener" class="social-card press rv" style="--d:.25s">
+        <div class="sc-ico" style="background:#ffe45e;color:var(--ink)!important"><span class="ms" style="color:var(--ink)">folder</span></div>
+        <div class="sc-txt"><b>Repo Project</b><small>portofolio-Jar</small></div>
+      </a>
     </div>
   </section>
 
@@ -567,11 +609,17 @@ body.menu-open .swipe-hint{display:none}
   </a>
 </div>
 
+<div class="toast" id="toast"><span class="ms">check_circle</span><span id="toastMsg">Berhasil!</span></div>
+
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const rd=matchMedia('(prefers-reduced-motion:reduce)').matches;
 const isMobile=matchMedia('(pointer:coarse)').matches;
 const isLowEnd=navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=4;
+
+// ===== Toast =====
+const toast=$('#toast'),toastMsg=$('#toastMsg');let toastTimer;
+function showToast(msg){toastMsg.textContent=msg;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2200)}
 
 // ===== Reveal on scroll =====
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
@@ -631,17 +679,14 @@ addEventListener('scroll',()=>{vel=Math.max(-40,Math.min(40,vel+(scrollY-sy)*.2)
 function mloop(t){vel*=.93;const w=m[0].scrollWidth/2,sk=Math.max(-12,Math.min(12,-vel*.5));
 mx[0]-=1.2+vel;mx[1]-=1.2+vel;const p0=((mx[0]%w)+w)%w,p1=((mx[1]%w)+w)%w;
 m[0].style.transform=`translateX(${-p0}px) skewX(${sk}deg)`;m[1].style.transform=`translateX(${p1-w}px) skewX(${sk}deg)`;
-if(!rd&&!isLowEnd){
-  const rx=Math.sin(t/1500)*8;
-  mqA.style.transform=`rotateX(${15+rx}deg) rotate(-2deg)`;
-  mqB.style.transform=`rotateX(${-15+rx}deg) rotate(1.5deg)`;
-}
+if(!rd&&!isLowEnd){const rx=Math.sin(t/1500)*8;mqA.style.transform=`rotateX(${15+rx}deg) rotate(-2deg)`;mqB.style.transform=`rotateX(${-15+rx}deg) rotate(1.5deg)`}
 requestAnimationFrame(mloop)}
 if(!rd)requestAnimationFrame(mloop);
 
 $$('.feat').forEach(f=>f.addEventListener('click',()=>{f.classList.remove('wig');void f.offsetWidth;f.classList.add('wig')}));
 $$('#sw button').forEach(b=>b.addEventListener('click',e=>{$$('#sw button').forEach(x=>x.setAttribute('aria-pressed',x===b));
-document.documentElement.style.setProperty('--ac',b.dataset.a);document.documentElement.style.setProperty('--sk',b.dataset.s);confetti(e.clientX,e.clientY)}));
+document.documentElement.style.setProperty('--ac',b.dataset.a);document.documentElement.style.setProperty('--sk',b.dataset.s);confetti(e.clientX,e.clientY);
+document.documentElement.dataset.customColor='1'}));
 $$('.faq-q').forEach(q=>q.addEventListener('click',()=>{const i=q.parentElement,o=i.classList.contains('open');$$('.faq-item').forEach(x=>x.classList.remove('open'));if(!o)i.classList.add('open')}));
 
 const src='<h1>Halo dunia!</h1>\n<button class="keren">\n  Pajar\n</button>',pre=$('#pre'),prev=$('#prev');
@@ -649,8 +694,9 @@ new IntersectionObserver((es,o)=>{if(!es[0].isIntersecting)return;o.disconnect()
 if(rd){pre.textContent=src;prev.classList.add('go');return}
 let i=0;(function t(){pre.textContent=src.slice(0,++i)+(i<src.length?'▌':'');if(i<src.length)setTimeout(t,55);else prev.classList.add('go')})()},{threshold:.7}).observe(pre);
 
+// ===== Copy nomor =====
 $('#cp').addEventListener('click',e=>{const b=$('#cpb');try{navigator.clipboard.writeText('+6281511518262')}catch(_){}
-b.textContent='Tersalin!';confetti(e.clientX,e.clientY);setTimeout(()=>b.textContent='Salin nomor',1600)});
+b.textContent='Tersalin!';showToast('Nomor berhasil disalin!');confetti(e.clientX,e.clientY);setTimeout(()=>b.textContent='Salin nomor',1600)});
 $$('a[href*="wa.me"]').forEach(a=>a.addEventListener('click',e=>confetti(e.clientX,e.clientY)));
 
 // ===== Sticky CTA =====
@@ -709,14 +755,9 @@ if(!rd&&!isLowEnd){
       body.classList.add('jelly-active');
       const skew=v*.12;
       const scale=1+Math.abs(v)*.0008;
-      targets.forEach((t,i)=>{
-        t.style.transform=`translateY(${v*.15}px) scaleY(${scale}) skewY(${skew}deg)`;
-      });
+      targets.forEach((t,i)=>{t.style.transform=`translateY(${v*.15}px) scaleY(${scale}) skewY(${skew}deg)`});
       clearTimeout(jellyTimer);
-      jellyTimer=setTimeout(()=>{
-        body.classList.remove('jelly-active');
-        targets.forEach(t=>{t.style.transform='';});
-      },120);
+      jellyTimer=setTimeout(()=>{body.classList.remove('jelly-active');targets.forEach(t=>{t.style.transform=''})},120);
     }
   },{passive:true});
 }
@@ -726,20 +767,11 @@ if(isMobile&&!rd&&typeof DeviceMotionEvent!=='undefined'){
   const startMotion=()=>{
     let lastShake=0;
     addEventListener('devicemotion',e=>{
-      const a=e.accelerationIncludingGravity;
-      if(!a)return;
+      const a=e.accelerationIncludingGravity;if(!a)return;
       const mag=Math.abs(a.x||0)+Math.abs(a.y||0)+Math.abs(a.z||0);
       const now=Date.now();
-      if(mag>35&&now-lastShake>500){
-        lastShake=now;
-        document.body.animate([
-          {transform:'translate(0,0) rotate(0)'},
-          {transform:'translate(-8px,4px) rotate(-.6deg)'},
-          {transform:'translate(8px,-4px) rotate(.6deg)'},
-          {transform:'translate(-6px,-3px) rotate(-.4deg)'},
-          {transform:'translate(6px,3px) rotate(.4deg)'},
-          {transform:'translate(0,0) rotate(0)'}
-        ],{duration:600,easing:'ease-out'});
+      if(mag>35&&now-lastShake>500){lastShake=now;
+        document.body.animate([{transform:'translate(0,0) rotate(0)'},{transform:'translate(-8px,4px) rotate(-.6deg)'},{transform:'translate(8px,-4px) rotate(.6deg)'},{transform:'translate(-6px,-3px) rotate(-.4deg)'},{transform:'translate(6px,3px) rotate(.4deg)'},{transform:'translate(0,0) rotate(0)'}],{duration:600,easing:'ease-out'});
         confetti(innerWidth/2,innerHeight/2);
       }
     },{passive:true});
@@ -752,8 +784,7 @@ if(isMobile&&!rd&&typeof DeviceMotionEvent!=='undefined'){
 
 // ===== Time of day =====
 function applyTimeOfDay(){
-  const h=new Date().getHours();
-  const tod=$('#tod');
+  const h=new Date().getHours();const tod=$('#tod');
   let icon,label,bg,c1;
   if(h>=5&&h<11){icon='wb_twilight';label='Pagi';bg='#fef3c7';c1='#ffd9a3'}
   else if(h>=11&&h<15){icon='wb_sunny';label='Siang';bg='#f4faff';c1='#7fd4ff'}
@@ -761,35 +792,24 @@ function applyTimeOfDay(){
   else{icon='nights_stay';label='Malam';bg='#dbe4f5';c1='#8a5cff'}
   tod.innerHTML=`<span class="ms">${icon}</span><span>${label}</span>`;
   document.documentElement.style.setProperty('--bg',bg);
-  if(!document.documentElement.dataset.customColor)
-    document.documentElement.style.setProperty('--sk',c1);
+  if(!document.documentElement.dataset.customColor)document.documentElement.style.setProperty('--sk',c1);
   const meta=document.querySelector('meta[name="theme-color"]')||document.createElement('meta');
   meta.name='theme-color';meta.content=bg;document.head.appendChild(meta);
 }
-applyTimeOfDay();
-setInterval(applyTimeOfDay,60000);
+applyTimeOfDay();setInterval(applyTimeOfDay,60000);
 
 // ===== Door reveal =====
 const doorWrap=document.getElementById('doorWrap');
-new IntersectionObserver((es,o)=>{
-  es.forEach(e=>{
-    if(e.isIntersecting){
-      setTimeout(()=>doorWrap.classList.add('open'),300);
-      o.disconnect();
-    }
-  });
-},{threshold:.3}).observe(doorWrap);
+new IntersectionObserver((es,o)=>{es.forEach(e=>{if(e.isIntersecting){setTimeout(()=>doorWrap.classList.add('open'),300);o.disconnect()}})},{threshold:.3}).observe(doorWrap);
 
-// ===== Logo 5x = easter egg =====
+// ===== Logo 5x easter egg =====
 const logo=document.getElementById('logo');
 let taps=0,lastTap=0;
 logo.addEventListener('click',()=>{
-  const now=Date.now();
-  taps=now-lastTap<600?taps+1:1;lastTap=now;
+  const now=Date.now();taps=now-lastTap<600?taps+1:1;lastTap=now;
   logo.style.transform=`rotate(${Math.random()*20-10}deg) scale(1.15)`;
   setTimeout(()=>logo.style.transform='',200);
-  if(taps>=5){
-    taps=0;
+  if(taps>=5){taps=0;
     document.body.animate([{transform:'scale(1)'},{transform:'scale(1.05)'},{transform:'scale(1)'}],{duration:500});
     for(let i=0;i<80;i++)setTimeout(()=>confetti(Math.random()*innerWidth,Math.random()*innerHeight),i*20);
   }
@@ -807,198 +827,146 @@ const pvTitle=document.getElementById('pvTitle');
 const pvDesc=document.getElementById('pvDesc');
 const pvTag=document.getElementById('pvTag');
 
-// ===== Split huruf per-huruf =====
 document.querySelectorAll('.menu-label').forEach(label=>{
-  const text=label.dataset.text;
-  label.innerHTML='';
+  const text=label.dataset.text;label.innerHTML='';
   [...text].forEach((ch,i)=>{
-    const span=document.createElement('span');
-    span.className='menu-letter';
+    const span=document.createElement('span');span.className='menu-letter';
     span.textContent=ch===' '?'\u00A0':ch;
-    // delay per huruf, plus delay per menu item (stagger)
     const itemIdx=[...document.querySelectorAll('.menu-item')].indexOf(label.closest('.menu-item'));
     span.style.transitionDelay=`${0.25+itemIdx*0.08+i*0.035}s`;
     label.appendChild(span);
   });
 });
 
-// ===== Preview data =====
 const previewData={
   beranda:{emoji:'👋',title:'Beranda',desc:'Kenalan sama Pajar dulu yuk! Cerita singkat tentang siapa dan apa yang dikerjain.',tag:'Intro'},
   jasa:{emoji:'💼',title:'Jasa Bikin Web',desc:'5 paket harga murah mulai 5K. Portofolio, toko, sekolah, kelas. Bisa nego!',tag:'Paling Dicari'},
+  support:{emoji:'🚀',title:'Support & Populerkan',desc:'Bantu share halaman ini atau kasih bintang di GitHub. Gratis, 5 detik!',tag:'Bantu Pajar'},
   faq:{emoji:'❓',title:'Pertanyaan Umum',desc:'Jawaban lengkap soal harga, pengerjaan, revisi, dan pembayaran.',tag:'Info'},
-  kontak:{emoji:'📱',title:'Hubungi Kami',desc:'Chat langsung via WhatsApp atau salin nomor dengan sekali sentuh.',tag:'Kontak'},
+  kontak:{emoji:'📱',title:'Hubungi & Sosmed',desc:'WhatsApp, GitHub, LinkedIn, Email. Semua link ada di sini.',tag:'Kontak'},
   wa:{emoji:'💬',title:'Chat WhatsApp',desc:'Langsung ngobrol sama Pajar. Konsultasi gratis dulu, gak ada paksaan!',tag:'Online'}
 };
 
-// ===== Open / Close menu =====
-function openMenu(){
-  menuOverlay.classList.add('open');
-  menuOverlay.setAttribute('aria-hidden','false');
-  menuBtn.setAttribute('aria-expanded','true');
-  document.body.classList.add('menu-open');
-}
-function closeMenu(){
-  menuOverlay.classList.remove('open');
-  menuOverlay.setAttribute('aria-hidden','true');
-  menuBtn.setAttribute('aria-expanded','false');
-  document.body.classList.remove('menu-open');
-  hidePreview();
-}
+function openMenu(){menuOverlay.classList.add('open');menuOverlay.setAttribute('aria-hidden','false');menuBtn.setAttribute('aria-expanded','true');document.body.classList.add('menu-open')}
+function closeMenu(){menuOverlay.classList.remove('open');menuOverlay.setAttribute('aria-hidden','true');menuBtn.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open');hidePreview()}
 menuBtn.addEventListener('click',openMenu);
 menuClose.addEventListener('click',closeMenu);
 menuOverlay.addEventListener('click',e=>{if(e.target===menuOverlay)closeMenu()});
 addEventListener('keydown',e=>{if(e.key==='Escape'&&menuOverlay.classList.contains('open'))closeMenu()});
 
-// ===== Klik menu item =====
 document.querySelectorAll('.menu-item').forEach(item=>{
   item.addEventListener('click',e=>{
     const href=item.getAttribute('href');
     if(href&&href.startsWith('#')){
-      e.preventDefault();
-      closeMenu();
-      setTimeout(()=>{
-        const target=document.querySelector(href);
-        if(target){
-          const y=target.getBoundingClientRect().top+scrollY-100;
-          window.scrollTo({top:y,behavior:'smooth'});
-        }
-      },350);
-    } else {
-      setTimeout(closeMenu,200);
-    }
+      e.preventDefault();closeMenu();
+      setTimeout(()=>{const target=document.querySelector(href);if(target){const y=target.getBoundingClientRect().top+scrollY-100;window.scrollTo({top:y,behavior:'smooth'})}},350);
+    } else {setTimeout(closeMenu,200)}
   });
-
-  // ===== Hover = tampil preview =====
   item.addEventListener('mouseenter',()=>{
-    const key=item.dataset.preview;
-    const data=previewData[key];
-    if(!data)return;
-    pvEmoji.textContent=data.emoji;
-    pvTitle.textContent=data.title;
-    pvDesc.textContent=data.desc;
-    pvTag.textContent=data.tag;
+    const key=item.dataset.preview;const data=previewData[key];if(!data)return;
+    pvEmoji.textContent=data.emoji;pvTitle.textContent=data.title;pvDesc.textContent=data.desc;pvTag.textContent=data.tag;
     menuPreview.classList.add('show');
   });
-  item.addEventListener('mouseleave',()=>{
-    menuPreview.classList.remove('show');
-  });
+  item.addEventListener('mouseleave',()=>menuPreview.classList.remove('show'));
 });
 function hidePreview(){menuPreview.classList.remove('show')}
 
 // ===== SWIPE GESTURE =====
-// - Geser dari kiri (edge) → buka menu
-// - Geser ke kiri (saat menu kebuka) → tutup menu
 (function(){
   let startX=0,startY=0,startTime=0,tracking=false;
-  const EDGE=40; // area tepi kiri untuk trigger open
-  const MIN_DIST=60; // jarak minimum untuk dianggap swipe
-  const MAX_TIME=600; // ms maks
-
+  const EDGE=40,MIN_DIST=60,MAX_TIME=600;
   addEventListener('touchstart',e=>{
-    const t=e.touches[0];
-    startX=t.clientX;startY=t.clientY;startTime=Date.now();
-    if(menuOverlay.classList.contains('open')){
-      // di dalam menu, semua area bisa swipe close
-      tracking=true;
-    } else if(startX<EDGE){
-      // di tepi kiri, tracking untuk open
-      tracking=true;
-    } else {
-      tracking=false;
-    }
+    const t=e.touches[0];startX=t.clientX;startY=t.clientY;startTime=Date.now();
+    if(menuOverlay.classList.contains('open')){tracking=true}
+    else if(startX<EDGE){tracking=true}else{tracking=false}
   },{passive:true});
-
   addEventListener('touchmove',e=>{
-    if(!tracking)return;
-    const t=e.touches[0];
-    const dx=t.clientX-startX;
-    const dy=t.clientY-startY;
-    // dominan horizontal
+    if(!tracking)return;const t=e.touches[0];
+    const dx=t.clientX-startX,dy=t.clientY-startY;
     if(Math.abs(dx)>Math.abs(dy)*1.2){
-      // visual feedback: geser overlay sedikit
-      if(menuOverlay.classList.contains('open')){
-        if(dx<0){
-          const progress=Math.min(1,Math.abs(dx)/200);
-          menuOverlay.style.transform=`translateX(${dx*.6}px)`;
-          menuOverlay.style.opacity=(1-progress*.6).toString();
-        }
-      } else {
-        if(dx>0&&startX<EDGE){
-          const progress=Math.min(1,dx/200);
-          // preview halus: geser hint indicator
-        }
+      if(menuOverlay.classList.contains('open')&&dx<0){
+        const progress=Math.min(1,Math.abs(dx)/200);
+        menuOverlay.style.transform=`translateX(${dx*.6}px)`;
+        menuOverlay.style.opacity=(1-progress*.6).toString();
       }
     }
   },{passive:true});
-
   addEventListener('touchend',e=>{
-    if(!tracking)return;
-    tracking=false;
-    const t=e.changedTouches[0];
-    const dx=t.clientX-startX;
-    const dy=t.clientY-startY;
-    const dt=Date.now()-startTime;
-    // reset transform
-    menuOverlay.style.transform='';
-    menuOverlay.style.opacity='';
-
+    if(!tracking)return;tracking=false;
+    const t=e.changedTouches[0];const dx=t.clientX-startX,dy=t.clientY-startY,dt=Date.now()-startTime;
+    menuOverlay.style.transform='';menuOverlay.style.opacity='';
     if(dt>MAX_TIME)return;
     const horiz=Math.abs(dx)>Math.abs(dy)*1.2;
-
-    if(menuOverlay.classList.contains('open')){
-      // swipe kiri = tutup
-      if(horiz&&dx<-MIN_DIST)closeMenu();
-    } else {
-      // swipe kanan dari tepi = buka
-      if(horiz&&dx>MIN_DIST&&startX<EDGE)openMenu();
-    }
+    if(menuOverlay.classList.contains('open')){if(horiz&&dx<-MIN_DIST)closeMenu()}
+    else{if(horiz&&dx>MIN_DIST&&startX<EDGE)openMenu()}
   },{passive:true});
-
-  // ===== MOUSE DRAG untuk desktop =====
   let mouseDown=false,mStartX=0,mStartY=0,mStartTime=0;
-  addEventListener('mousedown',e=>{
-    if(menuOverlay.classList.contains('open')){
-      mouseDown=true;mStartX=e.clientX;mStartY=e.clientY;mStartTime=Date.now();
-    }
-  });
+  addEventListener('mousedown',e=>{if(menuOverlay.classList.contains('open')){mouseDown=true;mStartX=e.clientX;mStartY=e.clientY;mStartTime=Date.now()}});
   addEventListener('mouseup',e=>{
     if(!mouseDown)return;mouseDown=false;
-    const dx=e.clientX-mStartX;
-    const dy=e.clientY-mStartY;
-    const dt=Date.now()-mStartTime;
+    const dx=e.clientX-mStartX,dy=e.clientY-mStartY,dt=Date.now()-mStartTime;
     if(dt<600&&Math.abs(dx)>Math.abs(dy)*1.2&&dx<-80)closeMenu();
   });
 })();
 
-// ===== Smooth scroll untuk semua anchor =====
+// ===== Smooth scroll =====
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
-    const href=a.getAttribute('href');
-    if(href==='#'||href.length<2)return;
-    const target=document.querySelector(href);
-    if(!target)return;
+    const href=a.getAttribute('href');if(href==='#'||href.length<2)return;
+    const target=document.querySelector(href);if(!target)return;
     e.preventDefault();
-    const startY=scrollY;
-    const endY=target.getBoundingClientRect().top+scrollY-100;
-    const dist=endY-startY;
+    const startY=scrollY,endY=target.getBoundingClientRect().top+scrollY-100,dist=endY-startY;
     const dur=Math.min(1400,Math.max(600,Math.abs(dist)*.7));
-    let start;
-    function ease(t){return t<.5?16*t*t*t*t*t:1-Math.pow(-2*t+2,5)/2}
-    function step(ts){
-      if(!start)start=ts;
-      const p=Math.min(1,(ts-start)/dur);
-      scrollTo(0,startY+dist*ease(p));
-      if(p<1)requestAnimationFrame(step);
-    }
+    let start;function ease(t){return t<.5?16*t*t*t*t*t:1-Math.pow(-2*t+2,5)/2}
+    function step(ts){if(!start)start=ts;const p=Math.min(1,(ts-start)/dur);scrollTo(0,startY+dist*ease(p));if(p<1)requestAnimationFrame(step)}
     requestAnimationFrame(step);
   });
 });
 
-// Tandai custom color biar time-of-day gak nimpa
-$$('#sw button').forEach(b=>b.addEventListener('click',()=>{
-  document.documentElement.dataset.customColor='1';
+// =====================================================
+// ===== SHARE & SUPPORT =====
+// =====================================================
+const pageURL=location.href.split('#')[0];
+const shareText='Cek portofolio Pajar — calon UI designer kelas 7A Al-Husein! Jasa bikin web mulai 5K 🚀';
+const shareTitle='Portofolio Pajar';
+
+// Set link share
+$('#shareWA').href=`https://wa.me/?text=${encodeURIComponent(shareText+'\n'+pageURL)}`;
+$('#shareX').href=`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageURL)}`;
+$('#shareTG').href=`https://t.me/share/url?url=${encodeURIComponent(pageURL)}&text=${encodeURIComponent(shareText)}`;
+$('#shareFB').href=`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageURL)}`;
+
+// Copy link
+$('#shareCopy').addEventListener('click',async e=>{
+  try{
+    await navigator.clipboard.writeText(pageURL);
+    showToast('Link berhasil disalin! 🎉');
+    confetti(e.clientX,e.clientY);
+  }catch(_){
+    const inp=document.createElement('input');inp.value=pageURL;document.body.appendChild(inp);inp.select();document.execCommand('copy');inp.remove();
+    showToast('Link berhasil disalin! 🎉');
+  }
+});
+
+// Native share (Web Share API)
+$('#shareNative').addEventListener('click',async e=>{
+  if(navigator.share){
+    try{await navigator.share({title:shareTitle,text:shareText,url:pageURL});showToast('Makasih udah share! 💙')}catch(_){}
+  }else{
+    showToast('HP kamu belum support, pakai tombol lain ya!');
+  }
+});
+
+// Klik share → confetti
+$$('.share-btn').forEach(b=>b.addEventListener('click',e=>{
+  if(b.id!=='shareCopy'&&b.id!=='shareNative')confetti(e.clientX,e.clientY);
 }));
+
+// Tombol star → confetti besar
+document.querySelector('.star-btn')?.addEventListener('click',e=>{
+  for(let i=0;i<50;i++)setTimeout(()=>confetti(Math.random()*innerWidth,Math.random()*innerHeight),i*20);
+  showToast('Makasih udah support Pajar! ⭐');
+});
 </script>
 </body>
 </html>
