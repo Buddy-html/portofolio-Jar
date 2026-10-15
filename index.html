@@ -78,10 +78,7 @@ a{color:var(--ac);text-decoration:none}button{font-family:inherit;color:inherit}
 .cta-t{font-weight:800;font-size:30px;line-height:1.05;color:#fff;-webkit-text-stroke:1.5px var(--ink)}.cta-d{font-weight:600;font-size:16px}
 .cta-btn{align-self:stretch;height:58px;border-radius:16px;background:#fff;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);color:var(--ink);font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;gap:8px}.cta-btn .ms{font-size:22px;color:var(--ac)}
 .scallop{height:18px;background-image:radial-gradient(circle at 50% 100%,#bfe6ff 10px,var(--ink) 10px 13px,transparent 13px);background-size:28px 18px;background-repeat:repeat-x;background-position:center bottom}
-.p-foot{padding:22px 20px 140px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:13px;color:#3a5674}.p-foot .ms{font-size:16px;color:var(--pk);animation:beat 1s infinite}@keyframes beat{50%{transform:scale(1.4)}}
-.float{position:fixed;inset:0;width:100%;max-width:440px;margin:0 auto;pointer-events:none;z-index:8}
-.fab{position:absolute;right:16px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:#25d366;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);display:flex;align-items:center;justify-content:center;color:#fff;pointer-events:auto;animation:shake 3.5s infinite}
-a.fab:hover{color:#fff}.fab .ms{font-size:28px}@keyframes shake{0%,86%,100%{transform:rotate(0)}89%{transform:rotate(-14deg)}92%{transform:rotate(12deg)}95%{transform:rotate(-8deg)}}
+.p-foot{padding:22px 20px 60px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:13px;color:#3a5674}.p-foot .ms{font-size:16px;color:var(--pk);animation:beat 1s infinite}@keyframes beat{50%{transform:scale(1.4)}}
 .hero>canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}.hero>*{z-index:1}.hero>canvas{z-index:0}
 .mqs{margin:0 -12px 40px;padding:14px 0;perspective:600px}
 .mq{overflow:hidden;white-space:nowrap;border-block:3px solid var(--ink);color:#fff;background:var(--ac);transform-style:preserve-3d;transition:transform .3s}
@@ -100,7 +97,6 @@ a.fab:hover{color:#fff}.fab .ms{font-size:28px}@keyframes shake{0%,86%,100%{tran
 .js .rv{opacity:0;transform:scale(1.06) translateY(14px) rotate(-1deg);transition:all .55s cubic-bezier(.3,1.5,.5,1);transition-delay:var(--d,0s)}.js .rv.in{opacity:1;transform:none}
 :focus-visible{outline:3px solid var(--pk);outline-offset:3px}
 
-/* ==== Section Jasa ==== */
 .svc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
 .svc{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 6px;background:#f4faff;border:2.5px solid var(--ink);border-radius:14px;box-shadow:3px 3px 0 var(--ink)}
 .svc .ms{font-size:26px;color:var(--ac)}
@@ -133,7 +129,6 @@ a.fab:hover{color:#fff}.fab .ms{font-size:28px}@keyframes shake{0%,86%,100%{tran
 .nego-note{display:flex;align-items:center;gap:10px;padding:12px 14px;background:#fff8d6;border:2.5px dashed var(--ink);border-radius:16px;font-weight:700;font-size:14px;line-height:1.3}
 .nego-note .ms{font-size:24px;color:#ff9a2f;flex-shrink:0}
 
-/* ==== Sticky CTA Bar ==== */
 .sticky-cta{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translate(-50%,140%);width:calc(100% - 32px);max-width:416px;padding:10px 12px 10px 16px;display:flex;align-items:center;gap:12px;background:#fff;border:3px solid var(--ink);border-radius:18px;box-shadow:5px 5px 0 var(--ink);z-index:9;transition:transform .4s cubic-bezier(.3,1.4,.5,1)}
 .sticky-cta.show{transform:translate(-50%,0)}
 .scta-info{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.15}
@@ -143,7 +138,6 @@ a.fab:hover{color:#fff}.fab .ms{font-size:28px}@keyframes shake{0%,86%,100%{tran
 .scta-btn .ms{font-size:20px}
 .scta-btn:hover{color:#fff}
 
-/* ==== Door reveal ==== */
 .door-wrap{position:relative;overflow:hidden}
 .door{position:absolute;top:0;bottom:0;width:51%;background:#0d2a4a;z-index:4;pointer-events:none;transition:transform 1.2s cubic-bezier(.7,0,.3,1)}
 .door.l{left:0;transform-origin:left center;border-right:2px solid var(--sk)}
@@ -154,15 +148,12 @@ a.fab:hover{color:#fff}.fab .ms{font-size:28px}@keyframes shake{0%,86%,100%{tran
 .door.l .door-icon{justify-content:flex-end;padding-right:16px}
 .door.r .door-icon{justify-content:flex-start;padding-left:16px}
 
-/* ==== Jelly scroll ==== */
 .jelly-target{will-change:transform;transition:transform .6s cubic-bezier(.34,1.56,.64,1)}
 .jelly-active .jelly-target{transition:transform .15s ease-out}
 
-/* ==== Time-of-day indicator ==== */
 .tod{display:flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.7);border:2px solid var(--ink);font-weight:700;font-size:11px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 .tod .ms{font-size:14px}
 
-/* ==== Fullscreen Menu ==== */
 .menu-overlay{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;padding:calc(20px + env(safe-area-inset-top,0px)) 24px calc(24px + env(safe-area-inset-bottom,0px));background:rgba(13,42,74,.65);backdrop-filter:blur(28px) saturate(180%);-webkit-backdrop-filter:blur(28px) saturate(180%);opacity:0;visibility:hidden;transition:opacity .5s cubic-bezier(.4,0,.2,1),visibility .5s;pointer-events:none;overflow-y:auto}
 .menu-overlay.open{opacity:1;visibility:visible;pointer-events:auto}
 .menu-bg-shapes{position:absolute;inset:0;overflow:hidden;pointer-events:none}
@@ -207,7 +198,6 @@ a.fab:hover{color:#fff}.fab .ms{font-size:28px}@keyframes shake{0%,86%,100%{tran
 
 body.menu-open{overflow:hidden}
 
-/* ==== Preview Section (hover) ==== */
 .menu-preview{position:fixed;right:calc((100vw - min(100vw,440px)) / 2 + 20px);top:50%;transform:translateY(-50%) translateX(40px) scale(.9);width:220px;padding:16px;background:rgba(255,255,255,.95);border:3px solid var(--ink);border-radius:18px;box-shadow:6px 6px 0 var(--ink);opacity:0;pointer-events:none;transition:opacity .35s,transform .35s cubic-bezier(.3,1.4,.5,1);z-index:101;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .menu-preview.show{opacity:1;transform:translateY(-50%) translateX(0) scale(1)}
 .preview-emoji{font-size:40px;line-height:1;margin-bottom:6px}
@@ -218,6 +208,14 @@ body.menu-open{overflow:hidden}
 .swipe-hint{position:fixed;left:0;top:50%;transform:translateY(-50%);width:6px;height:80px;background:var(--ac);border-radius:0 8px 8px 0;z-index:7;opacity:0;animation:swipePulse 3s ease-in-out infinite;pointer-events:none}
 @keyframes swipePulse{0%,100%{opacity:0;transform:translateY(-50%) translateX(-6px)}50%{opacity:.6;transform:translateY(-50%) translateX(0)}}
 body.menu-open .swipe-hint{display:none}
+
+/* Anti-overflow global */
+.page, .sec, .card, .hero, .topbar, .cta, .price, .step, .faq-item, .social-card, .support-card {max-width:100%;overflow-wrap:anywhere;word-break:break-word}
+.hero-title, .h2, .card-t, .feat-t, .feat-d, .sub, .step-t b, .step-t span, .faq-q b, .faq-a > div, .price-desc, .price-detail, .price-num, .social-card small, .share-btn, .menu-item, .menu-label, .sup-title, .sup-desc {overflow-wrap:anywhere;word-break:break-word;max-width:100%}
+.social-card .sc-txt small{max-width:100%}
+.menu-item{word-break:break-word}
+.menu-label{flex-wrap:wrap}
+.toast{word-break:break-word}
 
 /* ==== Social Media Section ==== */
 .social-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -242,21 +240,24 @@ body.menu-open .swipe-hint{display:none}
 .share-btn.wa{background:#25d366;color:#fff}
 .share-btn.wa .ms{color:#fff}
 .share-btn.wa:hover{color:#fff}
-.share-btn.x{background:#000;color:#fff}
-.share-btn.x .ms{color:#fff}
-.share-btn.x:hover{color:#fff}
 .share-btn.tg{background:#2aabee;color:#fff}
 .share-btn.tg .ms{color:#fff}
 .share-btn.tg:hover{color:#fff}
-.share-btn.fb{background:#1877f2;color:#fff}
-.share-btn.fb .ms{color:#fff}
-.share-btn.fb:hover{color:#fff}
 .share-btn.star{background:#ffe45e;color:var(--ink)}
 .share-btn.star:hover{color:var(--ink)}
 .star-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;height:54px;border-radius:16px;background:#0d2a4a;color:#ffe45e;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);font-weight:800;font-size:16px;cursor:pointer;transition:transform .12s,box-shadow .12s}
 .star-btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
 .star-btn:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--ink)}
 .star-btn .ms{font-size:24px}
+
+/* ==== UID Free Fire ==== */
+.uid-row{display:flex;align-items:center;gap:12px;padding:14px;background:#f4faff;border:2.5px solid var(--ink);border-radius:16px;box-shadow:3px 3px 0 var(--ink)}
+.uid-row .uid-n{width:40px;height:40px;flex-shrink:0;border-radius:12px;background:var(--ac);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;border:2.5px solid var(--ink)}
+.uid-row .uid-txt{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.2}
+.uid-row .uid-txt small{font-weight:700;font-size:12px;color:#5f7f9f}
+.uid-row .uid-txt b{font-weight:800;font-size:18px;letter-spacing:.03em;word-break:break-all}
+.uid-copy{flex-shrink:0;width:42px;height:42px;border-radius:12px;background:#fff;border:2.5px solid var(--ink);box-shadow:2px 2px 0 var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.uid-copy .ms{font-size:22px}
 
 /* Toast */
 .toast{position:fixed;left:50%;bottom:calc(90px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:#fff;font-weight:800;font-size:14px;padding:12px 20px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:200;display:flex;align-items:center;gap:8px;max-width:90vw}
@@ -294,17 +295,21 @@ body.menu-open .swipe-hint{display:none}
     <a href="#faq" class="menu-item" data-preview="faq">
       <span class="menu-num">04</span><span class="menu-label" data-text="FAQ"></span><span class="ms menu-arrow">arrow_outward</span>
     </a>
+    <a href="#ff" class="menu-item" data-preview="ff">
+      <span class="menu-num">05</span><span class="menu-label" data-text="UID FF"></span><span class="ms menu-arrow">arrow_outward</span>
+    </a>
     <a href="#kontak" class="menu-item" data-preview="kontak">
-      <span class="menu-num">05</span><span class="menu-label" data-text="Kontak"></span><span class="ms menu-arrow">arrow_outward</span>
+      <span class="menu-num">06</span><span class="menu-label" data-text="Kontak"></span><span class="ms menu-arrow">arrow_outward</span>
     </a>
     <a href="https://wa.me/6281511518262?text=Halo%20Pajar!" target="_blank" rel="noopener" class="menu-item highlight" data-preview="wa">
-      <span class="menu-num">06</span><span class="menu-label" data-text="Chat WA"></span><span class="ms menu-arrow">chat</span>
+      <span class="menu-num">07</span><span class="menu-label" data-text="Chat WA"></span><span class="ms menu-arrow">chat</span>
     </a>
   </nav>
 
   <div class="menu-footer">
     <div class="menu-social">
       <a href="https://wa.me/6281511518262" target="_blank" rel="noopener" aria-label="WhatsApp"><span class="ms">chat</span></a>
+      <a href="https://t.me/jarzzzzzzzzzzzzzzzzzzzzzzzzzzzzz" target="_blank" rel="noopener" aria-label="Telegram"><span class="ms">send</span></a>
       <a href="https://github.com/Buddy-html" target="_blank" rel="noopener" aria-label="GitHub"><span class="ms">code</span></a>
       <a href="https://www.linkedin.com/in/muhamad-pajardana-kusuma" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="ms">work</span></a>
       <a href="mailto:Muhamad.pajardana@gmail.com" aria-label="Email"><span class="ms">mail</span></a>
@@ -473,18 +478,17 @@ body.menu-open .swipe-hint{display:none}
   <!-- ===== SUPPORT & POPULERKAN ===== -->
   <section class="sec" id="support">
     <div class="h2 rv">Support & Populerkan</div>
-    <p class="sub rv">Suka halaman ini? Bantu Pajar biar makin dikenal! Share ke teman atau kasih bintang di GitHub. Gratis, cuma butuh 5 detik 😄</p>
+    <p class="sub rv">Suka halaman ini? Bantu Pajar biar makin dikenal! Share ke teman atau kasih bintang di GitHub.</p>
 
     <div class="support-card rv">
       <div class="sup-title"><span class="ms">campaign</span> Bagikan halaman ini</div>
       <p class="sup-desc">Pilih cara share favoritmu. Sekali klik langsung ke aplikasinya.</p>
       <div class="share-grid">
         <a href="#" id="shareWA" class="share-btn wa" target="_blank" rel="noopener"><span class="ms">chat</span> WhatsApp</a>
-        <a href="#" id="shareX" class="share-btn x" target="_blank" rel="noopener"><span class="ms">tag</span> Twitter/X</a>
         <a href="#" id="shareTG" class="share-btn tg" target="_blank" rel="noopener"><span class="ms">send</span> Telegram</a>
-        <a href="#" id="shareFB" class="share-btn fb" target="_blank" rel="noopener"><span class="ms">public</span> Facebook</a>
+        <a href="#" id="shareTGChat" class="share-btn tg" target="_blank" rel="noopener"><span class="ms">forum</span> Channel TG</a>
+        <button class="share-btn star" id="shareCopy" style="justify-content:center"><span class="ms">link</span> Salin link</button>
       </div>
-      <button class="share-btn star" id="shareCopy" style="justify-content:center"><span class="ms">link</span> Salin link halaman</button>
       <button class="share-btn" id="shareNative" style="justify-content:center;background:#fff"><span class="ms">ios_share</span> Share pakai HP</button>
     </div>
 
@@ -494,15 +498,31 @@ body.menu-open .swipe-hint{display:none}
       <a href="https://github.com/Buddy-html/portofolio-Jar" target="_blank" rel="noopener" class="star-btn"><span class="ms">star</span> ⭐ Star di GitHub</a>
       <a href="https://github.com/Buddy-html" target="_blank" rel="noopener" class="share-btn" style="justify-content:center;background:#0d2a4a;color:#fff"><span class="ms" style="color:#fff">person_add</span> Follow @Buddy-html</a>
     </div>
+  </section>
 
-    <div class="card rv" style="background:#fff8d6">
-      <div class="card-t">💡 Kenapa bantu share?</div>
-      <div class="perks">
-        <div class="perk"><span class="ms">trending_up</span><span>Bikin Pajar makin dikenal sebagai <b>UI designer muda</b></span></div>
-        <div class="perk"><span class="ms">handshake</span><span>Bantu teman yang butuh <b>jasa bikin web murah</b></span></div>
-        <div class="perk"><span class="ms">favorite</span><span>Support pelajar yang lagi <b>belajar ngoding</b></span></div>
-        <div class="perk"><span class="ms">emoji_events</span><span>Semoga rezekinya <b>balik ke kamu</b> juga ✨</span></div>
+  <!-- ===== UID FREE FIRE ===== -->
+  <section class="sec" id="ff">
+    <div class="h2 rv">UID Free Fire</div>
+    <p class="sub rv">Main FF juga? Boleh mabar atau gift ya 😄 Ini UID aku:</p>
+
+    <div class="card rv">
+      <div class="card-t">🎮 UID Akun Free Fire</div>
+
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="uid-row">
+          <div class="uid-n">1</div>
+          <div class="uid-txt"><small>Akun Utama</small><b>8861861071</b></div>
+          <button class="uid-copy" data-uid="8861861071" aria-label="Copy UID 1"><span class="ms">content_copy</span></button>
+        </div>
+
+        <div class="uid-row">
+          <div class="uid-n" style="background:var(--pk)">2</div>
+          <div class="uid-txt"><small>Akun Kedua</small><b>2965133207</b></div>
+          <button class="uid-copy" data-uid="2965133207" aria-label="Copy UID 2"><span class="ms">content_copy</span></button>
+        </div>
       </div>
+
+      <p class="sub" style="margin:0;font-size:13px;text-align:center">Ketuk ikon salin untuk copy UID</p>
     </div>
   </section>
 
@@ -569,6 +589,10 @@ body.menu-open .swipe-hint{display:none}
         <div class="sc-ico" style="background:#25d366"><span class="ms">chat</span></div>
         <div class="sc-txt"><b>WhatsApp</b><small>+62 815-1151-8262</small></div>
       </a>
+      <a href="https://t.me/jarzzzzzzzzzzzzzzzzzzzzzzzzzzzzz" target="_blank" rel="noopener" class="social-card press rv" style="--d:.03s">
+        <div class="sc-ico" style="background:#2aabee"><span class="ms">send</span></div>
+        <div class="sc-txt"><b>Telegram</b><small>@jarzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</small></div>
+      </a>
       <a href="https://github.com/Buddy-html" target="_blank" rel="noopener" class="social-card press rv" style="--d:.05s">
         <div class="sc-ico" style="background:#0d2a4a"><span class="ms">code</span></div>
         <div class="sc-txt"><b>GitHub</b><small>@Buddy-html</small></div>
@@ -586,7 +610,7 @@ body.menu-open .swipe-hint{display:none}
         <div class="sc-txt"><b id="cpb">Salin nomor</b><small>Sekali sentuh</small></div>
       </button>
       <a href="https://github.com/Buddy-html/portofolio-Jar" target="_blank" rel="noopener" class="social-card press rv" style="--d:.25s">
-        <div class="sc-ico" style="background:#ffe45e;color:var(--ink)!important"><span class="ms" style="color:var(--ink)">folder</span></div>
+        <div class="sc-ico" style="background:#ffe45e"><span class="ms" style="color:var(--ink)">folder</span></div>
         <div class="sc-txt"><b>Repo Project</b><small>portofolio-Jar</small></div>
       </a>
     </div>
@@ -597,7 +621,6 @@ body.menu-open .swipe-hint{display:none}
   <div class="scallop"></div>
   <footer class="p-foot"><span>Dibuat dengan</span><span class="ms">favorite</span><span>oleh Pajar</span></footer>
 </div>
-<div class="float"><a href="https://wa.me/6281511518262?text=Halo%20Pajar!" target="_blank" rel="noopener" class="fab press" aria-label="WhatsApp"><span class="ms">chat</span></a></div>
 
 <div class="sticky-cta" id="scta">
   <div class="scta-info">
@@ -698,6 +721,18 @@ let i=0;(function t(){pre.textContent=src.slice(0,++i)+(i<src.length?'▌':'');i
 $('#cp').addEventListener('click',e=>{const b=$('#cpb');try{navigator.clipboard.writeText('+6281511518262')}catch(_){}
 b.textContent='Tersalin!';showToast('Nomor berhasil disalin!');confetti(e.clientX,e.clientY);setTimeout(()=>b.textContent='Salin nomor',1600)});
 $$('a[href*="wa.me"]').forEach(a=>a.addEventListener('click',e=>confetti(e.clientX,e.clientY)));
+
+// ===== Copy UID Free Fire =====
+$$('.uid-copy').forEach(btn=>{
+  btn.addEventListener('click',async e=>{
+    const uid=btn.dataset.uid;
+    try{await navigator.clipboard.writeText(uid)}catch(_){
+      const i=document.createElement('input');i.value=uid;document.body.appendChild(i);i.select();document.execCommand('copy');i.remove();
+    }
+    showToast('UID '+uid+' tersalin! 🎮');
+    confetti(e.clientX,e.clientY);
+  });
+});
 
 // ===== Sticky CTA =====
 const scta=document.getElementById('scta');
@@ -843,7 +878,8 @@ const previewData={
   jasa:{emoji:'💼',title:'Jasa Bikin Web',desc:'5 paket harga murah mulai 5K. Portofolio, toko, sekolah, kelas. Bisa nego!',tag:'Paling Dicari'},
   support:{emoji:'🚀',title:'Support & Populerkan',desc:'Bantu share halaman ini atau kasih bintang di GitHub. Gratis, 5 detik!',tag:'Bantu Pajar'},
   faq:{emoji:'❓',title:'Pertanyaan Umum',desc:'Jawaban lengkap soal harga, pengerjaan, revisi, dan pembayaran.',tag:'Info'},
-  kontak:{emoji:'📱',title:'Hubungi & Sosmed',desc:'WhatsApp, GitHub, LinkedIn, Email. Semua link ada di sini.',tag:'Kontak'},
+  ff:{emoji:'🎮',title:'UID Free Fire',desc:'Mabar atau gift? Ini UID akun FF Pajar — akun 1 & 2.',tag:'Gaming'},
+  kontak:{emoji:'📱',title:'Hubungi & Sosmed',desc:'WhatsApp, Telegram, GitHub, LinkedIn, Email. Semua link ada di sini.',tag:'Kontak'},
   wa:{emoji:'💬',title:'Chat WhatsApp',desc:'Langsung ngobrol sama Pajar. Konsultasi gratis dulu, gak ada paksaan!',tag:'Online'}
 };
 
@@ -930,13 +966,10 @@ const pageURL=location.href.split('#')[0];
 const shareText='Cek portofolio Pajar — calon UI designer kelas 7A Al-Husein! Jasa bikin web mulai 5K 🚀';
 const shareTitle='Portofolio Pajar';
 
-// Set link share
 $('#shareWA').href=`https://wa.me/?text=${encodeURIComponent(shareText+'\n'+pageURL)}`;
-$('#shareX').href=`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageURL)}`;
 $('#shareTG').href=`https://t.me/share/url?url=${encodeURIComponent(pageURL)}&text=${encodeURIComponent(shareText)}`;
-$('#shareFB').href=`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageURL)}`;
+$('#shareTGChat').href='https://t.me/jarzzzzzzzzzzzzzzzzzzzzzzzzzzzzz';
 
-// Copy link
 $('#shareCopy').addEventListener('click',async e=>{
   try{
     await navigator.clipboard.writeText(pageURL);
@@ -948,7 +981,6 @@ $('#shareCopy').addEventListener('click',async e=>{
   }
 });
 
-// Native share (Web Share API)
 $('#shareNative').addEventListener('click',async e=>{
   if(navigator.share){
     try{await navigator.share({title:shareTitle,text:shareText,url:pageURL});showToast('Makasih udah share! 💙')}catch(_){}
@@ -957,12 +989,10 @@ $('#shareNative').addEventListener('click',async e=>{
   }
 });
 
-// Klik share → confetti
 $$('.share-btn').forEach(b=>b.addEventListener('click',e=>{
   if(b.id!=='shareCopy'&&b.id!=='shareNative')confetti(e.clientX,e.clientY);
 }));
 
-// Tombol star → confetti besar
 document.querySelector('.star-btn')?.addEventListener('click',e=>{
   for(let i=0;i<50;i++)setTimeout(()=>confetti(Math.random()*innerWidth,Math.random()*innerHeight),i*20);
   showToast('Makasih udah support Pajar! ⭐');
